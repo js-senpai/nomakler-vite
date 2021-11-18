@@ -4,7 +4,9 @@ import { UserConfig } from "vite";
 import viteCompression from 'vite-plugin-compression';
 import viteImagemin from 'vite-plugin-imagemin';
 const config: UserConfig = {
-  plugins: [react(), ssr(),viteCompression(),viteImagemin({
+  plugins: [react(), ssr(),viteCompression({
+    algorithm: 'brotliCompress'
+  }),viteImagemin({
     gifsicle: {
       optimizationLevel: 5,
       interlaced: false,
