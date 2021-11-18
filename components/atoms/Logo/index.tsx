@@ -7,7 +7,7 @@ const Logo = ({src = '',className = '',priority = false,...props}:LogoProps):JSX
   return (
       <div {...props} className={`${styles.logo} ${className}`}>
           <Link href="/" >
-                  {src.length ?<LazyLoadImage src={src}/>: 'Logo'}
+                  {src.length ?<LazyLoadImage width={200} height={37} src={src}/>: 'Logo'}
           </Link>
       </div>
 
