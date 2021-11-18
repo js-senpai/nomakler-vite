@@ -1,19 +1,15 @@
 import React from "react";
-import { Counter } from "./Counter";
+import Home from "../../components/templates/Home";
+import DefaultLayout from "../../layouts/DefaultLayout";
 
 export { Page };
 
-function Page() {
+// @ts-ignore
+function Page({header,homeBanner,footer,advantages = [],apartments = [],...props}) {
+  console.log(props)
   return (
-    <>
-      <h1>Welcome</h1>
-      This page is:
-      <ul>
-        <li>Rendered to HTML.</li>
-        <li>
-          Interactive. <Counter />
-        </li>
-      </ul>
-    </>
+    <DefaultLayout header={header} footer={footer}>
+        <Home {...props}  homeBanner={homeBanner} advantages={advantages} apartments={apartments} />
+    </DefaultLayout>
   );
 }
