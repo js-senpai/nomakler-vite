@@ -30,6 +30,8 @@
     "autoprefixer": "^10.4.0",
     "postcss": "^8.3.11",
     "sass": "^1.43.4",
-    "tailwindcss": "^2.2.19"
+    "tailwindcss": "^2.2.19",
+    "vite-plugin-compression": "^0.3.5",
+    "vite-plugin-imagemin": "^0.4.6"
   }
 }
