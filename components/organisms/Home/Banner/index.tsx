@@ -6,7 +6,7 @@ import {LazyLoadImage} from "react-lazy-load-image-component";
 const Banner = ({img = '/images/organisms/Home/Banner/banner.jpg',title = '',description = '',...props}:BannerProps):JSX.Element => {
     return(
         <section  className={styles.banner}>
-            <LazyLoadImage
+            <img
                 src={img}
                 className={styles.banner__img}
             />
