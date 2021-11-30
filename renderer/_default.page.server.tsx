@@ -1,4 +1,5 @@
-import preactRender from 'preact-render-to-string';
+// @ts-ignore
+import preactRender from 'preact-render-to-string/jsx';
 import { PageShell } from "./PageShell";
 import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr";
 import type { PageContext } from "./types";
