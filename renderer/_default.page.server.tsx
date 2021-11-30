@@ -12,7 +12,7 @@ async function render(pageContext: PageContextBuiltIn & PageContext) {
   const { render } = await import('preact-render-to-string')
   const pageHtml = render(
     <PageShell pageContext={pageContext}>
-    </PageShell>
+    </PageShell>, {}, { pretty: true }
   );
 
   // See https://vite-plugin-ssr.com/html-head
