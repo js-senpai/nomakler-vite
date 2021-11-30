@@ -12,6 +12,7 @@ async function hydrate() {
   // instead of `getPage()`, see https://vite-plugin-ssr.com/useClientRouter
   const pageContext = await getPage<PageContextBuiltInClient & PageContext>();
   const { Page, pageProps } = pageContext;
+  console.log(Page)
   PreactDOM.hydrate(
     <PageShell pageContext={pageContext}>
       <Page {...pageProps} />

@@ -9,17 +9,18 @@ export { render };
 export const passToClient = ["pageProps", "urlPathname"];
 
 async function render(pageContext: PageContextBuiltIn & PageContext) {
+  const { Page, pageProps } = pageContext
   const { render } = await import('preact-render-to-string')
   const pageHtml = render(
     <PageShell pageContext={pageContext}>
-    </PageShell>, {}, { pretty: true }
+      <Page {...pageProps} />
+    </PageShell>
   );
 
   // See https://vite-plugin-ssr.com/html-head
   const { documentProps } = pageContext;
   const title = (documentProps && documentProps.title) || "Vite SSR app";
   const desc = (documentProps && documentProps.description) || "App using Vite + vite-plugin-ssr";
-
   const documentHtml = escapeInject`<!DOCTYPE html>
     <html lang="en">
       <head>
