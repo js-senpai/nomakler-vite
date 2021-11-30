@@ -1,10 +1,10 @@
-import reactRefresh from '@vitejs/plugin-react-refresh';
+import preact from "@preact/preset-vite";
 import ssr from "vite-plugin-ssr/plugin";
 import { UserConfig } from "vite";
 import viteCompression from 'vite-plugin-compression';
 import viteImagemin from 'vite-plugin-imagemin';
 const config: UserConfig = {
-  plugins: [reactRefresh(), ssr(),viteCompression({
+  plugins: [preact(), ssr(),viteCompression({
     algorithm: 'brotliCompress'
   }),viteImagemin({
     gifsicle: {
