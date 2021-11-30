@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "vite --port $PORT",
+    "start": "npm run prod --port $PORT",
     "dev": "npm run server",
     "prod": "npm run build && npm run server:prod",
     "build": "vite build && vite build --ssr",
