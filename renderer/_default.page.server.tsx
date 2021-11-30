@@ -1,5 +1,4 @@
-// @ts-ignore
-import preactRender from 'preact-render-to-string/jsx';
+
 import { PageShell } from "./PageShell";
 import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr";
 import type { PageContext } from "./types";
@@ -10,7 +9,8 @@ export { render };
 export const passToClient = ["pageProps", "urlPathname"];
 
 async function render(pageContext: PageContextBuiltIn & PageContext) {
-  const pageHtml = preactRender(
+  const { render } = await import('preact-render-to-string')
+  const pageHtml = render(
     <PageShell pageContext={pageContext}>
     </PageShell>
   );
