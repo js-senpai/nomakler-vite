@@ -1,16 +1,10 @@
-import {forwardRef} from "react";
-
 import {faBars,faTimes} from "@fortawesome/free-solid-svg-icons";
-import {ButtonBurgerProps} from "./ButtonBurger.props";
 import styles from './ButtonBurger.module.sass'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-const ButtonBurger = forwardRef<HTMLButtonElement, ButtonBurgerProps>(
-    ({ active = false,className = '',children, ...props }, ref) => {
+const ButtonBurger = ({ active = false,className = '', ...props }) => {
         return (
             <button
-                {...props}
                 type="button"
-                ref={ref}
                 className={`${styles.buttonBurger}`}
             >
                 {
@@ -18,6 +12,5 @@ const ButtonBurger = forwardRef<HTMLButtonElement, ButtonBurgerProps>(
                 }
             </button>
         )
-    })
-ButtonBurger.displayName = 'ButtonBurger'
+    }
 export default ButtonBurger

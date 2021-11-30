@@ -1,12 +1,9 @@
 
-import {forwardRef} from "react";
 import {ButtonPrimaryProps} from "./ButtonPrimary.props";
 
-const ButtonPrimary = forwardRef<HTMLButtonElement, ButtonPrimaryProps>(
-    ({ block,className = '', ...props }, ref) => {
+const ButtonPrimary = ({ block,className = '', ...props }:ButtonPrimaryProps) => {
    return (
        <button
-           ref={ref}
            className={`
            button-a
            button-primary
@@ -16,6 +13,5 @@ const ButtonPrimary = forwardRef<HTMLButtonElement, ButtonPrimaryProps>(
            `}
        />
    )
-})
-ButtonPrimary.displayName = 'ButtonPrimary'
+}
 export default ButtonPrimary

@@ -1,8 +1,6 @@
 import {ButtonHTMLAttributes, DetailedHTMLProps} from "react";
 
-export type ButtonPrimaryProps = DetailedHTMLProps<
-    ButtonHTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
-    > & {
+export interface ButtonPrimaryProps {
     block?: boolean
+    className?: string
 }

@@ -8,7 +8,7 @@ import BlockContainer from "../../../containers/BlockContainer";
 import Badge from "../../../atoms/Badge";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import LinkPrimary from "../../../atoms/Link/LinkPrimary";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 const ApartmentItem = ({
                        img = '/images/molecules/Catalog/Apartment/item-1.jpg',
                        verified = true,
@@ -25,8 +25,7 @@ const ApartmentItem = ({
         <BlockContainer {...props} className={`${styles.apartmentItem}`}>
             <div className={styles.apartmentItem__img}>
                 {
-                    img ?
-                    <LazyLoadImage src={img} />: null
+                    <img src={img} />
                 }
                 {
                     ready ? <Badge className={`${styles.apartmentItem__badge} ${styles.apartmentItem__badgeReadyRent}`}>Ready for rent</Badge>: null

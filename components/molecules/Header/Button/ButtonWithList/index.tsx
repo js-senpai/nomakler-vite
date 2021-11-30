@@ -1,15 +1,13 @@
-import {forwardRef,  useState} from "react";
+import {  useState } from "preact/hooks";
 import {ButtonWithListProps} from "./ButtonWithList.props";
 import { faSortDown } from '@fortawesome/free-solid-svg-icons'
 import styles from './ButtonWithList.module.sass'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-const ButtonWithList = forwardRef<HTMLButtonElement, ButtonWithListProps>(
-    ({ text = '',className = '',children, ...props },ref) => {
+const ButtonWithList = ({ text = '',className = '',children, ...props }:ButtonWithListProps) => {
         const [showContainer,toggleContainer] = useState(false)
         return (
             <button
                 type="button"
-                ref={ref}
                 className={`${styles.buttonWithList} ${showContainer ? styles.active : ''} ${className}`}
                 onClick={() => toggleContainer(!showContainer)}
             >
@@ -22,6 +20,5 @@ const ButtonWithList = forwardRef<HTMLButtonElement, ButtonWithListProps>(
                 </div>
             </button>
         )
-    })
-ButtonWithList.displayName = 'ButtonWithList'
+    }
 export default ButtonWithList

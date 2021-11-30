@@ -1,6 +1,5 @@
 
-import {  Component } from 'preact';
-export interface LogoProps extends Component<JSX.ElementAttributesProperty>{
+export interface LogoProps {
     src: string
     priority?: boolean
     className?: string

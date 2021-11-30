@@ -5,11 +5,11 @@ import Header from "../../components/organisms/Header";
 // @ts-ignore
 const DefaultLayout = ({header,footer,children,...props}):JSX.Element=>  {
     return (
-        <>
-            {Object.keys(header).length ? <Header header={header} />: null}
+        <div className="main-layout">
+            <Header header={header} />:
             {children}
-            {Object.keys(footer).length ? <Footer footer={footer} />: null}
-        </>
+            <Footer footer={footer} />
+        </div>
     )
 }
 export default DefaultLayout

@@ -10,11 +10,11 @@ const Home = ({
                   apartments = [],
                   ...props}:HomeProps):JSX.Element => {
     return (
-      <>
+      <div className="home">
         <Banner {...props} img={homeBanner.img} title={homeBanner.title} description={homeBanner.description} />
         <Advantages {...props} advantages={advantages} />
         <ActualApartments apartments={apartments} />
-      </>
+      </div>
     )
 }
 export default Home
