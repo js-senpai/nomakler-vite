@@ -1,4 +1,4 @@
-import React from "react";
+
 
 export interface ActualApartmentsProps extends React.HTMLAttributes<HTMLDivElement>{
   apartments: {

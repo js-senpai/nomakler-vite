@@ -1,12 +1,12 @@
 
 import {faBed,faShower,faRulerCombined} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+
 // Import components
 import {ApartmentsItemProps} from "./ApartmentsItem.props";
 import styles from './ApartmentItem.module.sass'
 import BlockContainer from "../../../containers/BlockContainer";
 import Badge from "../../../atoms/Badge";
-import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import LinkPrimary from "../../../atoms/Link/LinkPrimary";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 const ApartmentItem = ({

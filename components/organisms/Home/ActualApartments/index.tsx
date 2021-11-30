@@ -3,7 +3,7 @@ import {ActualApartmentsProps} from "./ActualApartments.props";
 import styles from './ActualApartments.module.sass'
 import DefaultContainer from "../../../containers/DefaultContainer";
 import FullWidthContainer from "../../../containers/FullWidthContainer";
-import React from "react";
+
 import ApartmentItem from "../../../molecules/Catalog/ApartmentItem";
 const ActualApartments = ({apartments = [],...props}: ActualApartmentsProps):JSX.Element => {
   return (

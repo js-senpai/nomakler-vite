@@ -2,7 +2,7 @@
 import {MenuProps} from "./Menu.props";
 import styles from './Menu.module.sass'
 import {Link} from "../../../../renderer/Link";
-import React from "react";
+
 const Menu = ({menu = [],className = '',...props}:MenuProps):JSX.Element => {
     return (
         <ul {...props} className={`${styles.menu} ${className}`}>

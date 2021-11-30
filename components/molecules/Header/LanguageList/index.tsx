@@ -1,7 +1,7 @@
 
 import styles from './LanguageList.module.sass'
 import ButtonWithList from "../Button/ButtonWithList";
-import React from 'react';
+
 const LanguageList = ():JSX.Element =>{
     // Toggle language container
     const locales = ['ru','en']

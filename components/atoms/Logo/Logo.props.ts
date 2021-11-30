@@ -1,6 +1,7 @@
-import React from "react";
 
-export interface LogoProps extends React.HTMLAttributes<HTMLDivElement>{
+import {  Component } from 'preact';
+export interface LogoProps extends Component<JSX.ElementAttributesProperty>{
     src: string
     priority?: boolean
+    className?: string
 }

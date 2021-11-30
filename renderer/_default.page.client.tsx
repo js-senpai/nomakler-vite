@@ -1,5 +1,5 @@
-import ReactDOM from "react-dom";
-import React from "react";
+// @ts-ignore
+import PreactDOM from "@preact/compat";
 import { getPage } from "vite-plugin-ssr/client";
 import { PageShell } from "./PageShell";
 import type { PageContext } from "./types";
@@ -12,7 +12,7 @@ async function hydrate() {
   // instead of `getPage()`, see https://vite-plugin-ssr.com/useClientRouter
   const pageContext = await getPage<PageContextBuiltInClient & PageContext>();
   const { Page, pageProps } = pageContext;
-  ReactDOM.hydrate(
+  PreactDOM.hydrate(
     <PageShell pageContext={pageContext}>
       <Page {...pageProps} />
     </PageShell>,

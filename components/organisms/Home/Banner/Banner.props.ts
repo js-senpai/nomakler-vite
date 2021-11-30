@@ -1,4 +1,4 @@
-import React from "react";
+
 
 
 export interface BannerProps extends React.HTMLAttributes<HTMLDivElement>{

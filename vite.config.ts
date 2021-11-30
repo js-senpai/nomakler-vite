@@ -1,10 +1,10 @@
-import react from "@vitejs/plugin-react";
+import reactRefresh from '@vitejs/plugin-react-refresh';
 import ssr from "vite-plugin-ssr/plugin";
 import { UserConfig } from "vite";
 import viteCompression from 'vite-plugin-compression';
 import viteImagemin from 'vite-plugin-imagemin';
 const config: UserConfig = {
-  plugins: [react(), ssr(),viteCompression({
+  plugins: [reactRefresh(), ssr(),viteCompression({
     algorithm: 'brotliCompress'
   }),viteImagemin({
     gifsicle: {
@@ -36,6 +36,17 @@ const config: UserConfig = {
       ],
     },
   }),],
+  esbuild: {
+    jsxFactory: 'h',
+    jsxFragment: 'Fragment',
+    jsxInject: `import { h, Fragment } from 'preact'`,
+  },
+  resolve: {
+    alias: {
+      "react": "@preact/compat",
+      "react-dom": "@preact/compat"
+    }
+  }
 };
 
 export default config;

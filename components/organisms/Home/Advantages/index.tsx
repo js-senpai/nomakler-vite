@@ -3,7 +3,7 @@ import {AdvantagesProps} from "./Advantages.props";
 
 import styles from './Advantages.module.sass'
 import DefaultContainer from "../../../containers/DefaultContainer";
-import React from "react";
+
 import AdvantagesItem from "../../../molecules/Home/AdvantagesItem";
 const Advantages = ({advantages = [],...props}:AdvantagesProps):JSX.Element => {
     return (

@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Copyright.module.sass'
-import {LazyLoadImage} from "react-lazy-load-image-component";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const Copyright = ({className = '',...props}):JSX.Element => {
     return (
         <a href="https://michaelstudioo.com/" target="__blank" className={`${styles.copyright}`}>

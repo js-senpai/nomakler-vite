@@ -1,12 +1,12 @@
-import React from 'react';
+
 import styles from './Banner.module.sass'
 import {BannerProps} from "./Banner.props";
 import DefaultContainer from "../../../containers/DefaultContainer";
-import {LazyLoadImage} from "react-lazy-load-image-component";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const Banner = ({img = '/images/organisms/Home/Banner/banner.jpg',title = '',description = '',...props}:BannerProps):JSX.Element => {
     return(
         <section  className={styles.banner}>
-            <img
+            <LazyLoadImage
                 src={img}
                 className={styles.banner__img}
             />

@@ -1,4 +1,4 @@
-import React from "react";
+
 
 export interface ApartmentsItemProps extends React.HTMLAttributes<HTMLDivElement>{
     img: string

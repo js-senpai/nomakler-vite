@@ -3,7 +3,7 @@ import {FooterProps} from "./Footer.props";
 // Import components
 import styles from './Footer.module.sass'
 import DefaultContainer from "../../containers/DefaultContainer";
-import React from "react";
+
 import Logo from "../../atoms/Logo";
 import Menu from "../../molecules/Footer/Menu";
 import Copyright from "../../molecules/Footer/Copyright";

@@ -1,4 +1,4 @@
-import React from "react";
+
 export interface HeaderProps extends React.HTMLAttributes<HTMLDivElement>{
     header: {
         menu: {

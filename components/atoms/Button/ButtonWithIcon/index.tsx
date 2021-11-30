@@ -1,7 +1,7 @@
 import {forwardRef} from "react";
 import {ButtonWithIconProps} from "./ButtonWithIcon.props";
 import styles from './ButtonWithIcon.module.sass'
-import React from "react";
+
 const ButtonWithIcon = forwardRef<HTMLButtonElement, ButtonWithIconProps>(
     ({text = '', className = '',children, ...props }, ref) => {
         return (

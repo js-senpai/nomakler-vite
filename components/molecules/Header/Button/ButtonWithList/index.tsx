@@ -1,9 +1,8 @@
 import {forwardRef,  useState} from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {ButtonWithListProps} from "./ButtonWithList.props";
 import { faSortDown } from '@fortawesome/free-solid-svg-icons'
 import styles from './ButtonWithList.module.sass'
-import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const ButtonWithList = forwardRef<HTMLButtonElement, ButtonWithListProps>(
     ({ text = '',className = '',children, ...props },ref) => {
         const [showContainer,toggleContainer] = useState(false)

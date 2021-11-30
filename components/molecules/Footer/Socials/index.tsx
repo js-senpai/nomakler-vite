@@ -1,7 +1,7 @@
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+
 import {SocialsProps} from "./Socials.props";
 import styles from './Socials.module.sass'
-import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const Socials = ({socials = [],className = '',...props}:SocialsProps):JSX.Element => {
     const GetIcon = ({icon = ''}) => {
         const faIcon = icon.split(' ') || ['fab','instagram']
