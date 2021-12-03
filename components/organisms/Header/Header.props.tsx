@@ -1,5 +1,5 @@
 
-export interface HeaderProps extends React.HTMLAttributes<HTMLDivElement>{
+export interface HeaderProps {
     header: {
         menu: {
             id: number

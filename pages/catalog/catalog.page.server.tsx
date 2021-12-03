@@ -1,11 +1,9 @@
-
-
 export { onBeforeRender }
 
 async function onBeforeRender() {
     return {
         pageContext: {
-            pageProps:{
+            pageProps: {
                 header: {
                     menu: [
                         {
@@ -26,43 +24,6 @@ async function onBeforeRender() {
                     ],
                     src: '/images/atoms/Logo/LogoLight.svg',
                 },
-                homeBanner: {
-                    img: '/images/organisms/Home/Banner/banner.jpg',
-                    title: 'Discover Your New Home',
-                    description: 'Helping 100 million renters find their perfect fit.'
-                },
-                advantages: [
-                    {
-                        id: 1,
-                        img: '/images/organisms/Home/Advantages/portfolio.svg',
-                        title: 'Renting Made Simple',
-                        description: 'Browse the highest quality listings, apply online, sign your lease, and even pay your rent from any device.'
-                    },
-                    {
-                        id: 2,
-                        img: '/images/organisms/Home/Advantages/search.svg',
-                        title: 'Find Your Next Renter',
-                        description: 'Connect with millions of renters and lease your property 100% online'
-                    },
-                    {
-                        id: 3,
-                        img: '/images/organisms/Home/Advantages/hand.svg',
-                        title: 'Tips for Renters',
-                        description: 'Tips for Renters Find answers to all of your renting questions with the best renter’s guide in the galaxy.'
-                    }
-                ],
-                apartments: Array(5).fill(0).map((e,i)=>({
-                    id: i,
-                    verified: true,
-                    ready: true,
-                    title: 'Confortable apartment',
-                    sleepingPlaces: 56,
-                    shower: 56,
-                    dimensions: 56,
-                    address: 'Metro Plaza Dr, Jersey City, NJ 07302, USA',
-                    slug: `apartment-${i}`,
-                    price: 500
-                })),
                 footer: {
                     logo: '/images/atoms/Logo/LogoDark.svg',
                     menu: [
@@ -137,6 +98,18 @@ async function onBeforeRender() {
                         }
                     ]
                 },
+                catalog: Array(18).fill(0).map((e,i)=>({
+                    id: i,
+                    verified: true,
+                    ready: true,
+                    title: 'Confortable apartment',
+                    sleepingPlaces: 56,
+                    shower: 56,
+                    dimensions: 56,
+                    address: 'Metro Plaza Dr, Jersey City, NJ 07302, USA',
+                    slug: `apartment-${i}`,
+                    price: 500
+                })),
             }
         }
     }

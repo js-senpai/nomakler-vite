@@ -1,7 +1,7 @@
 
 
 
-export interface HomeProps extends React.HTMLAttributes<HTMLDivElement>{
+export interface HomeProps{
     homeBanner: {
         img: string
         title: string

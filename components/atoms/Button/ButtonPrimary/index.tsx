@@ -1,7 +1,7 @@
 
 import {ButtonPrimaryProps} from "./ButtonPrimary.props";
 
-const ButtonPrimary = ({ block,className = '', ...props }:ButtonPrimaryProps) => {
+const ButtonPrimary = ({ block,className = '',children, ...props }:ButtonPrimaryProps) => {
    return (
        <button
            className={`
@@ -11,7 +11,7 @@ const ButtonPrimary = ({ block,className = '', ...props }:ButtonPrimaryProps) =>
            ${block && 'w-full'}  
            ${className}
            `}
-       />
+       >{children}</button>
    )
 }
 export default ButtonPrimary

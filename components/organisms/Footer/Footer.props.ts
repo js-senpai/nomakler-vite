@@ -1,6 +1,6 @@
 
 
-export interface FooterProps extends React.HTMLAttributes<HTMLDivElement>{
+export interface FooterProps {
     footer: {
         logo: string,
         socials: {
