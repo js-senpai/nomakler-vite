@@ -6,7 +6,6 @@ export interface FilterButtonProps {
 }
 
 export interface FilterButtonType {
-    id: string | number
     key: string
     value: string | number
 }

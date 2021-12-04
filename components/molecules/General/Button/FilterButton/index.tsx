@@ -10,8 +10,8 @@ const FilterButton = ({list = [],chooseData,currentData,className = ''}:FilterBu
         <ButtonWithList className={`${styles.filterButton} ${className}`} text={currentData.key} >
             {
                 filteredList.length ?
-                    filteredList.map(({id,key,value}) => (
-                        <div key={id} onClick={() => setValue({id,key,value})}>
+                    filteredList.map(({key,value}) => (
+                        <div key={key} onClick={() => setValue({key,value})}>
                             {key}
                         </div>
                     ))

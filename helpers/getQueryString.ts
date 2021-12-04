@@ -1,12 +1,12 @@
-const getQueryString = ({url,filterKey = ''}:{
+const getQueryString = ({url,filterKey = []}:{
     url: object
-    filterKey?: string
+    filterKey?: string[]
 }):string => {
     if(!url || !Object.keys(url).length && filterKey.length > 1) return ''
     let queryToString = ''
     for (const [key, value] of Object.entries(url)) {
         if(filterKey){
-            if(filterKey !== key){
+            if(filterKey.findIndex((data) => data === key ) === -1){
                 queryToString+=`${key}=${value}&`
             }
         } else {

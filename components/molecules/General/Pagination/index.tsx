@@ -19,14 +19,14 @@ const Pagination = ({total = 1, className = ''}:PaginationProps):JSX.Element => 
       return navValue
   },[navValue,getQueries.page])
   const navPrev = async () => {
-      const url = `${pageContext.urlPathname}${Object.keys(getQueries).length?`?${getQueryString({url:getQueries,filterKey: 'page'})}`:'?'}`
+      const url = `${pageContext.urlPathname}${Object.keys(getQueries).length?`?${getQueryString({url:getQueries,filterKey: ['page']})}`:'?'}`
       if(+pageValue > 1) {
           await setNavigation(+pageValue - 1)
           await navigate(`${url}page=${+pageValue - 1}`, { keepScrollPosition: true })
       }
   }
   const navNext = async () => {
-      const url = `${pageContext.urlPathname}${Object.keys(getQueries).length?`?${getQueryString({url:getQueries,filterKey: 'page'})}`:'?'}`
+      const url = `${pageContext.urlPathname}${Object.keys(getQueries).length?`?${getQueryString({url:getQueries,filterKey: ['page']})}`:'?'}`
       if(+pageValue < total){
           await setNavigation(+pageValue + 1)
           await navigate(`${url}page=${+pageValue + 1}`, { keepScrollPosition: true })
@@ -40,7 +40,7 @@ const Pagination = ({total = 1, className = ''}:PaginationProps):JSX.Element => 
           </button>
           {
               total >= 1 ? getTotal.map((e,i) =>(
-                  e > 1? <Link  className={`${styles.pagination__item} ${+e === +pageValue ? `${styles.pagination__item__active}`: ''}`} href={`${pageContext.urlPathname}?page=${e}`} key={e}>{e}</Link>:<Link  className={`${styles.pagination__item} ${+e === +pageValue ?`${styles.pagination__item__active}`: ''}`}  href={`${pageContext.urlPathname}`} key={e}>{e}</Link>
+                  e > 1? <Link keep-scroll-position  className={`${styles.pagination__item} ${+e === +pageValue ? `${styles.pagination__item__active}`: ''}`} href={`${pageContext.urlPathname}?page=${e}`} key={e}>{e}</Link>:<Link  className={`${styles.pagination__item} ${+e === +pageValue ?`${styles.pagination__item__active}`: ''}`}  href={`${pageContext.urlPathname}`} key={e}>{e}</Link>
               )) : null
           }
           <button className={`${styles.pagination__item}`} onClick={() => navNext()}>

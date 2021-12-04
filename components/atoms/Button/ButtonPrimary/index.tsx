@@ -4,6 +4,7 @@ import {ButtonPrimaryProps} from "./ButtonPrimary.props";
 const ButtonPrimary = ({ block = true,className = '',children, ...props }:ButtonPrimaryProps) => {
    return (
        <button
+           {...props}
            className={`
            button-a
            button-primary
