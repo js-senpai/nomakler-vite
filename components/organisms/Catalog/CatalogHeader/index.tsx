@@ -2,11 +2,9 @@ import styles from './CatalogHeader.module.sass'
 import SearchButton from "../../../molecules/General/Button/SearchButton";
 import FilterButton from "../../../molecules/General/Button/FilterButton";
 import {useState} from "preact/hooks";
-import ButtonWithIcon from "../../../atoms/Button/ButtonWithIcon";
-import {faFilter} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import ButtonPrimary from "../../../atoms/Button/ButtonPrimary";
-const CatalogHeader = ({statusList = [],typeList = []}) => {
+import {CatalogHeaderProps} from "./CatalogHeader.props";
+const CatalogHeader = ({statusList = [],typeList = [],className = ''}:CatalogHeaderProps):JSX.Element => {
     /* Filters */
     // Search
     const [searchText,setSearch] = useState('')
@@ -15,10 +13,10 @@ const CatalogHeader = ({statusList = [],typeList = []}) => {
     // Type
     const [type,setType] = useState({id: 0, key: 'Types',value: 'types'})
     return (
-        <div className={styles.catalogHeader}>
+        <div className={`${styles.catalogHeader} ${className}`}>
             <SearchButton  onSend={() => {}} onText={setSearch} text={searchText}/>
-            <FilterButton list={statusList} chooseData={setStatus} currentData={status} />
-            <FilterButton list={typeList} chooseData={setType} currentData={type} />
+            {statusList.length ? <FilterButton list={statusList} chooseData={setStatus} currentData={status} />: null}
+            {typeList.length ? <FilterButton list={typeList} chooseData={setType} currentData={type} />: null}
             <ButtonPrimary>Find</ButtonPrimary>
         </div>
     )

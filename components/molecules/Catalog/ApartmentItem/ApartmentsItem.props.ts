@@ -1,6 +1,7 @@
 
 
-export interface ApartmentsItemProps extends React.HTMLAttributes<HTMLDivElement>{
+export interface ApartmentsItemProps{
+    id: string | number
     img: string
     verified: boolean
     ready: boolean

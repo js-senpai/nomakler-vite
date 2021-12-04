@@ -14,7 +14,7 @@ const ActualApartments = ({apartments = [],...props}: ActualApartmentsProps):JSX
           </DefaultContainer>
           <FullWidthContainer>
               {apartments.length ?
-                  <ul className={styles.actualApartments__list}>
+                  <div className={styles.actualApartments__list}>
                       {
                           apartments.map(({
                                               id,
@@ -28,23 +28,22 @@ const ActualApartments = ({apartments = [],...props}: ActualApartmentsProps):JSX
                                               address = '',
                                               slug= '',
                                               price = 0,}) => (
-                              <li key={id}>
-                                  <ApartmentItem
-                                      img={img}
-                                      verified={verified}
-                                      ready={ready}
-                                      title={title}
-                                      sleepingPlaces={sleepingPlaces}
-                                      shower={shower}
-                                      dimensions={dimensions}
-                                      address={address}
-                                      slug={slug}
-                                      price={price}
-                                  />
-                              </li>
+                              <ApartmentItem
+                                  id={id}
+                                  img={img}
+                                  verified={verified}
+                                  ready={ready}
+                                  title={title}
+                                  sleepingPlaces={sleepingPlaces}
+                                  shower={shower}
+                                  dimensions={dimensions}
+                                  address={address}
+                                  slug={slug}
+                                  price={price}
+                              />
                           ))
                       }
-                  </ul>
+                  </div>
                   : null }
           </FullWidthContainer>
       </section>

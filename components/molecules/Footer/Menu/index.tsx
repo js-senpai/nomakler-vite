@@ -1,7 +1,6 @@
-
 import {MenuProps} from "./Menu.props";
 import styles from './Menu.module.sass'
-import {Link} from "../../../../renderer/Link";
+import {Link} from "../../../atoms/Link/Link";
 
 const Menu = ({menu = [],className = '',...props}:MenuProps):JSX.Element => {
     return (
@@ -10,7 +9,7 @@ const Menu = ({menu = [],className = '',...props}:MenuProps):JSX.Element => {
                 menu.length ?
                     menu.map(({id,url,text}) => (
                         <li className={`${styles.menu__item}`} key={id}>
-                            <Link href={url}>{text}</Link>
+                            <Link  href={url}>{text}</Link>
                         </li>
                     ))
                 : null

@@ -2,8 +2,6 @@
 import {FooterProps} from "./Footer.props";
 // Import components
 import styles from './Footer.module.sass'
-import DefaultContainer from "../../containers/DefaultContainer";
-
 import Logo from "../../atoms/Logo";
 import Menu from "../../molecules/Footer/Menu";
 import Copyright from "../../molecules/Footer/Copyright";
@@ -16,7 +14,7 @@ const Footer = ({footer:{
 },...props}:FooterProps):JSX.Element => {
     return (
         <footer {...props} className={`${styles.footer}`}>
-            <DefaultContainer className={`${styles.footer__container}`}>
+            <div className={`container ${styles.footer__container}`}>
                 <div className={`${styles.footer__item}`}>
                     <div className={`${styles.footer__logo}`}>
                         <Logo src={logo} />
@@ -40,7 +38,7 @@ const Footer = ({footer:{
                         <Copyright />
                     </div>
                 </div>
-            </DefaultContainer>
+            </div>
         </footer>
     )
 }

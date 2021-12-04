@@ -1,3 +1,5 @@
+import {FilterButtonType} from "../../components/molecules/General/Button/FilterButton/FilterButton.props";
+
 export { onBeforeRender }
 
 async function onBeforeRender() {
@@ -98,18 +100,61 @@ async function onBeforeRender() {
                         }
                     ]
                 },
-                catalog: Array(18).fill(0).map((e,i)=>({
-                    id: i,
-                    verified: true,
-                    ready: true,
-                    title: 'Confortable apartment',
-                    sleepingPlaces: 56,
-                    shower: 56,
-                    dimensions: 56,
-                    address: 'Metro Plaza Dr, Jersey City, NJ 07302, USA',
-                    slug: `apartment-${i}`,
-                    price: 500
-                })),
+                catalog: {
+                    catalogList: Array(18).fill(0).map((e,i)=>({
+                        id: i,
+                        verified: true,
+                        ready: true,
+                        title: 'Confortable apartment',
+                        sleepingPlaces: 56,
+                        shower: 56,
+                        dimensions: 56,
+                        address: 'Metro Plaza Dr, Jersey City, NJ 07302, USA',
+                        slug: `apartment-${i}`,
+                        price: 500
+                    })),
+                    total: 6
+                },
+                breadcrumb: {
+                    navigation: [
+                        {
+                            id: 1,
+                            name: 'Home',
+                            url: '/'
+                        },
+                        {
+                            id: 2,
+                            name: 'Catalog',
+                            url: '/catalog'
+                        }
+                    ]
+                },
+                headerPage: {
+                    statusList: [
+                        {
+                            id: 1,
+                            key: 'Test 1',
+                            value: 'test_1'
+                        },
+                        {
+                            id: 2,
+                            key: 'Test 2',
+                            value: 'test_2'
+                        }
+                    ],
+                    typeList: [
+                        {
+                            id: 1,
+                            key: 'Test 1',
+                            value: 'test_1'
+                        },
+                        {
+                            id: 2,
+                            key: 'Test 2',
+                            value: 'test_2'
+                        }
+                    ]
+                }
             }
         }
     }

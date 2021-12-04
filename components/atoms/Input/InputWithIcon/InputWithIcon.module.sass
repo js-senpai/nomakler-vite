@@ -5,20 +5,21 @@
   border: 1px solid #EDEDED
   border-radius: 2px
   transition: all 500ms ease-in-out
-  &:hover
-    background-color: #EDEDED
   &__text
+    @apply w-full
     display: block
     font-weight: 600
     text-transform: uppercase
+    border: none
+    outline: none
+    color: var(--grey)
   &__left
-    .buttonWithIcon__text
+    .inputWithIcon__text
       padding-left: 23px
   &__right
-    .buttonWithIcon__text
+    .inputWithIcon__text
       padding-right: 23px
       order: -1
   &__icon
     color: var(--blue)
-    cursor: pointer
 

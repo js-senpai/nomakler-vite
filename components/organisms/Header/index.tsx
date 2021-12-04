@@ -1,7 +1,6 @@
 import { useState } from 'preact/hooks';
 import styles from './Header.module.sass'
 import {HeaderProps} from "./Header.props";
-import DefaultContainer from "../../containers/DefaultContainer";
 import ButtonBurger from "../../molecules/Header/Button/ButtonBurger";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Logo from "../../atoms/Logo";
@@ -13,7 +12,7 @@ const Header = ({ header: {menu = [],src = '/images/atoms/Logo/LogoLight.svg'},.
    const [showMenu,toggleMenu] = useState(false)
    return(
        <header className={styles.header}>
-         <DefaultContainer className={styles.header__container}>
+         <div className={`container ${styles.header__container}`}>
              <ButtonBurger active={showMenu} onClick={() => toggleMenu(!showMenu)} />
              <div className={`${styles.header__logo}`}>
                  <Logo src={src}  />
@@ -28,7 +27,7 @@ const Header = ({ header: {menu = [],src = '/images/atoms/Logo/LogoLight.svg'},.
              </div>
              <LanguageList />
              <ButtonSign className={`${styles.header__btnAuth}`} />
-         </DefaultContainer>
+         </div>
        </header>
    )
 }

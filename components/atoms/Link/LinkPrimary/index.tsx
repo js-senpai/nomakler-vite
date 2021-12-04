@@ -1,6 +1,5 @@
-
 import styles from './LinkPrimary.module.sass'
-import {Link} from "../../../../renderer/Link";
+import {Link} from "../Link";
 
 const LinkPrimary = ({url = '/',className = '',...props}):JSX.Element => {
     return (

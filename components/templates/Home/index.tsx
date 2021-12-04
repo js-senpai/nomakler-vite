@@ -10,7 +10,7 @@ const Home = ({
                   apartments = [],
                   ...props}:HomeProps):JSX.Element => {
     return (
-      <div className="home">
+      <div className="homePage">
         <Banner {...props} img={homeBanner.img} title={homeBanner.title} description={homeBanner.description} />
         <Advantages {...props} advantages={advantages} />
         <ActualApartments apartments={apartments} />

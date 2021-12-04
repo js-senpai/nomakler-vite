@@ -1,7 +1,7 @@
 
 
 
-export interface BannerProps extends React.HTMLAttributes<HTMLDivElement>{
+export interface BannerProps{
     img: string
     title: string
     description: string

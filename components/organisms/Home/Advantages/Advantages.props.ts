@@ -1,6 +1,6 @@
 
 
-export interface AdvantagesProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface AdvantagesProps {
     advantages: {
         id: number | string
         img: string

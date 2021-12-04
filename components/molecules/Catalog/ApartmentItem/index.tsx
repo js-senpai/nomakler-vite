@@ -20,12 +20,12 @@ const ApartmentItem = ({
                        address = '',
                        slug = '',
                        price = 0,
-                       ...props}:ApartmentsItemProps):JSX.Element => {
+                       }:ApartmentsItemProps):JSX.Element => {
     return (
-        <BlockContainer {...props} className={`${styles.apartmentItem}`}>
+        <BlockContainer  className={`${styles.apartmentItem}`}>
             <div className={styles.apartmentItem__img}>
                 {
-                    <img src={img} />
+                    <img src={img}  alt={title}/>
                 }
                 {
                     ready ? <Badge className={`${styles.apartmentItem__badge} ${styles.apartmentItem__badgeReadyRent}`}>Ready for rent</Badge>: null

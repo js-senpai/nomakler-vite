@@ -5,7 +5,8 @@ body
   line-height: var(--line-height)
   color: var(--text-color)
   background-color: #ffff
-.container
+.container,.main-container
+  @apply mx-auto
   padding: 0 1rem
 h1
   font-weight: 600
@@ -21,3 +22,8 @@ h3
   line-height: 22px
 .blue-text
   color: var(--blue)
+.title-page
+  margin-bottom: 30px
+@screen lg
+  .main-container
+    @apply px-60
