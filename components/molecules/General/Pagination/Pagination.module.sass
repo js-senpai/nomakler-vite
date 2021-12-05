@@ -1,8 +1,9 @@
 .pagination
   margin-bottom: 60px
   display: flex
-  justify-content: center
+  justify-content: start
   align-items: center
+  flex-wrap: wrap
   &__item
     @apply flex items-center justify-center flex-wrap
     width: 40px
@@ -10,8 +11,12 @@
     border: 1px solid var(--grey)
     color: #000
     transition: all 500ms ease-in-out
+    margin-bottom: 15px
     &:not(:last-child)
       margin-right: 15px
     &__active,&:hover
       color: #fff
       background-color: var(--blue)
+@screen md
+  .pagination
+    justify-content: center
