@@ -17,9 +17,9 @@ const CatalogHeader = ({statusList = [],typeList = [],className = ''}:CatalogHea
     // Search
     const [searchText,setSearch] = useState('')
     // Status
-    const [status,setStatus] = useState(getQueries.status ? { key: 'Status', value: getQueries.status } : { key: 'status',value: 'not_set'})
+    const [status,setStatus] = useState(getQueries.status ? { key: 'Status', value: getQueries.status } : { key: 'Status',value: 'not_set'})
     // Type
-    const [type,setType] = useState(getQueries.type ? { key: 'Type', value: getQueries.type } : { key: 'type',value: 'not_set'})
+    const [type,setType] = useState(getQueries.type ? { key: 'Type', value: getQueries.type } : { key: 'Type',value: 'not_set'})
     // Submit filters
     const submitFilters = () => {
         let url = `${pageContext.urlPathname}${Object.keys(getQueries).length?`?${getQueryString({url:getQueries,filterKey: ['status','type']})}`:'?'}`
