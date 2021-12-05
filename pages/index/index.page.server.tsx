@@ -3,6 +3,7 @@
 export { onBeforeRender }
 
 async function onBeforeRender() {
+    let count = 1
     return {
         pageContext: {
             pageProps:{
@@ -51,18 +52,28 @@ async function onBeforeRender() {
                         description: 'Tips for Renters Find answers to all of your renting questions with the best renter’s guide in the galaxy.'
                     }
                 ],
-                apartments: Array(5).fill(0).map((e,i)=>({
-                    id: i,
-                    verified: true,
-                    ready: true,
-                    title: 'Confortable apartment',
-                    sleepingPlaces: 56,
-                    shower: 56,
-                    dimensions: 56,
-                    address: 'Metro Plaza Dr, Jersey City, NJ 07302, USA',
-                    slug: `apartment-${i}`,
-                    price: 500
-                })),
+                apartments: Array(18).fill(0).map((e,i)=>
+                    {
+                        if(count >= 1 && count <6){
+                            count++
+                        } else {
+                            count = 1
+                        }
+                        return {
+                            id: i,
+                            verified: true,
+                            ready: true,
+                            title: 'Confortable apartment',
+                            sleepingPlaces: 56,
+                            shower: 56,
+                            dimensions: 56,
+                            address: 'Metro Plaza Dr, Jersey City, NJ 07302, USA',
+                            slug: `apartment-${i}`,
+                            price: 500,
+                            img: `/images/molecules/Catalog/Apartment/item-${count}.jpg`,
+                        }
+                    }
+                ),
                 footer: {
                     logo: '/images/atoms/Logo/LogoDark.svg',
                     menu: [

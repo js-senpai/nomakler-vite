@@ -3,5 +3,6 @@ import {FilterButtonType} from "../../../molecules/General/Button/FilterButton/F
 export interface CatalogHeaderProps {
     statusList: FilterButtonType[]
     typeList: FilterButtonType[]
+    extendedList: FilterButtonType[]
     className?: string
 }

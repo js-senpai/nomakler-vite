@@ -1,8 +1,11 @@
-import {ButtonHTMLAttributes, DetailedHTMLProps} from "react";
+import { IconProp} from "@fortawesome/fontawesome-svg-core";
+import {ComponentChildren} from "preact";
 
-export type ButtonWithListProps = DetailedHTMLProps<
-    ButtonHTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
-    > & {
+
+
+export interface ButtonWithListProps {
     text: string
+    icon?: IconProp
+    children: ComponentChildren
+    className?: string
 }

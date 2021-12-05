@@ -7,8 +7,9 @@ import {CatalogHeaderProps} from "./CatalogHeader.props";
 import getQueryString from "../../../../helpers/getQueryString";
 import {PageContext} from "../../../../renderer/types";
 import {usePageContext} from "../../../../renderer/usePageContext";
-import { navigate } from "vite-plugin-ssr/client/router";
-const CatalogHeader = ({statusList = [],typeList = [],className = ''}:CatalogHeaderProps):JSX.Element => {
+import { navigate } from "vite-plugin-ssr/client/router"
+import { faFilter } from '@fortawesome/free-solid-svg-icons'
+const CatalogHeader = ({statusList = [],typeList = [],extendedList = [], className = ''}:CatalogHeaderProps):JSX.Element => {
     // @ts-ignore
     const pageContext:PageContext = usePageContext();
     // @ts-ignore
@@ -20,6 +21,8 @@ const CatalogHeader = ({statusList = [],typeList = [],className = ''}:CatalogHea
     const [status,setStatus] = useState(getQueries.status ? { key: 'Status', value: getQueries.status } : { key: 'Status',value: 'not_set'})
     // Type
     const [type,setType] = useState(getQueries.type ? { key: 'Type', value: getQueries.type } : { key: 'Type',value: 'not_set'})
+    // Extended filter
+    const [extended,setExtended] = useState(getQueries.extended ? { key: 'Extended', value: getQueries.extended } : { key: 'Extended',value: 'not_set'})
     // Submit filters
     const submitFilters = () => {
         let url = `${pageContext.urlPathname}${Object.keys(getQueries).length?`?${getQueryString({url:getQueries,filterKey: ['status','type']})}`:'?'}`
@@ -39,7 +42,11 @@ const CatalogHeader = ({statusList = [],typeList = [],className = ''}:CatalogHea
             <SearchButton  onSend={() => {}} onText={setSearch} text={searchText}/>
             {statusList.length ? <FilterButton list={statusList} chooseData={setStatus} currentData={status} />: null}
             {typeList.length ? <FilterButton list={typeList} chooseData={setType} currentData={type} />: null}
-            <ButtonPrimary onClick={() => submitFilters()}>Find</ButtonPrimary>
+            {extendedList.length ? <FilterButton list={extendedList} chooseData={setExtended} currentData={extended} icon={faFilter} />: null }
+            <ButtonPrimary
+                // @ts-ignore
+                onClick={() => submitFilters()}
+            >Find</ButtonPrimary>
         </div>
     )
 }

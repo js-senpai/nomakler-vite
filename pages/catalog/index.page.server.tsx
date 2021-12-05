@@ -3,6 +3,7 @@ import {FilterButtonType} from "../../components/molecules/General/Button/Filter
 export { onBeforeRender }
 
 async function onBeforeRender() {
+    let count = 1
     return {
         pageContext: {
             pageProps: {
@@ -101,18 +102,28 @@ async function onBeforeRender() {
                     ]
                 },
                 catalog: {
-                    catalogList: Array(18).fill(0).map((e,i)=>({
-                        id: i,
-                        verified: true,
-                        ready: true,
-                        title: 'Confortable apartment',
-                        sleepingPlaces: 56,
-                        shower: 56,
-                        dimensions: 56,
-                        address: 'Metro Plaza Dr, Jersey City, NJ 07302, USA',
-                        slug: `apartment-${i}`,
-                        price: 500
-                    })),
+                    catalogList: Array(18).fill(0).map((e,i)=>
+                        {
+                        if(count >= 1 && count <6){
+                            count++
+                        } else {
+                            count = 1
+                        }
+                        return {
+                            id: i,
+                            verified: true,
+                            ready: true,
+                            title: 'Confortable apartment',
+                            sleepingPlaces: 56,
+                            shower: 56,
+                            dimensions: 56,
+                            address: 'Metro Plaza Dr, Jersey City, NJ 07302, USA',
+                            slug: `apartment-${i}`,
+                            price: 500,
+                            img: `/images/molecules/Catalog/Apartment/item-${count}.jpg`,
+                        }
+                    }
+                    ),
                     total: 6
                 },
                 breadcrumb: {
@@ -143,6 +154,18 @@ async function onBeforeRender() {
                         }
                     ],
                     typeList: [
+                        {
+                            id: 1,
+                            key: 'Test 1',
+                            value: 'test_1'
+                        },
+                        {
+                            id: 2,
+                            key: 'Test 2',
+                            value: 'test_2'
+                        }
+                    ],
+                    extendedList: [
                         {
                             id: 1,
                             key: 'Test 1',
