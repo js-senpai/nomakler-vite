@@ -1,4 +1,3 @@
-
 import Home from "../../components/templates/Home";
 import DefaultLayout from "../../layouts/DefaultLayout";
 import {HomePageProps} from "./index.page.props";

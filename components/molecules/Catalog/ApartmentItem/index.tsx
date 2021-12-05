@@ -1,6 +1,5 @@
-
 import {faBed,faShower,faRulerCombined} from "@fortawesome/free-solid-svg-icons";
-
+import LazyLoad from 'react-lazyload';
 // Import components
 import {ApartmentsItemProps} from "./ApartmentsItem.props";
 import styles from './ApartmentItem.module.sass'
@@ -8,7 +7,6 @@ import BlockContainer from "../../../containers/BlockContainer";
 import Badge from "../../../atoms/Badge";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import LinkPrimary from "../../../atoms/Link/LinkPrimary";
-
 const ApartmentItem = ({
                        img = '/images/molecules/Catalog/Apartment/item-1.jpg',
                        verified = true,
@@ -25,7 +23,9 @@ const ApartmentItem = ({
         <BlockContainer  className={`${styles.apartmentItem}`}>
             <div className={styles.apartmentItem__img}>
                 {
-                    <img src={img}  alt={title}/>
+                    <LazyLoad height={232}>
+                        <img src={img}  alt={title} width={350} height={232}/>
+                    </LazyLoad>
                 }
                 {
                     ready ? <Badge className={`${styles.apartmentItem__badge} ${styles.apartmentItem__badgeReadyRent}`}>Ready for rent</Badge>: null
