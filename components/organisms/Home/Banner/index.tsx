@@ -12,7 +12,7 @@ const Banner = ({img = '/images/organisms/Home/Banner/banner.jpg',title = '',des
                     className={styles.banner__img}
                 />
             </LazyLoad>
-            <DefaultContainer className="main-container relative">
+            <DefaultContainer className="container main-container relative">
                 {title.length?<h1 className={styles.banner__title}>{title}</h1>: null}
                 {description.length?<div className={styles.banner__description}>{description}</div>: null}
             </DefaultContainer>
