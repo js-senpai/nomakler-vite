@@ -9,6 +9,7 @@
       object-position: center
       height: 100%
       width: 100%
+      max-height: 232px
   &__badge
     position: absolute
     top: 25px
@@ -42,7 +43,7 @@
     margin-bottom: 23px
   &__footer
     @apply grid justify-center items-center
-    grid-template-columns: 1fr 1fr
+    grid-template-columns: 1fr
     grid-gap: 15px
   &__price
     @apply flex flex-wrap
@@ -53,5 +54,7 @@
       padding-right: 1px
     &__text
       line-height: 25px
-
-
+@screen md
+  .apartmentItem
+    &__footer
+      grid-template-columns: 1fr 1fr

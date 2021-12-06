@@ -12,10 +12,10 @@ const config: UserConfig = {
       interlaced: false,
     },
     optipng: {
-      optimizationLevel: 5,
+      optimizationLevel: 2,
     },
     mozjpeg: {
-      quality: 20,
+      quality: 80,
     },
     pngquant: {
       quality: [0.8, 0.9],

@@ -8,6 +8,7 @@
     grid-template-rows: auto
   &__item
     color: #fff
+    text-align: center
   &__logo,&__copyright,&__socials
     @apply flex justify-center items-center
   &__logo
@@ -17,15 +18,17 @@
 
 @screen lg
   .footer
+    &__item
+      text-align: left
     &__container
       @apply items-start
       grid-template-columns: 1fr 1fr 2fr
     &__logo,&__copyright,,&__socials
       @apply block
     &__logo
-      margin-bottom: 69px
+      margin-bottom: 64px
     &__copyright
-      margin-top: 85px
+      margin-top: 87px
     &__itemLast
       column-count: 2
       column-gap: 30px
