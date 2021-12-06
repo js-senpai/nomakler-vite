@@ -8,14 +8,14 @@ const config: UserConfig = {
     algorithm: 'brotliCompress'
   }),viteImagemin({
     gifsicle: {
-      optimizationLevel: 5,
+      optimizationLevel: 9,
       interlaced: false,
     },
     optipng: {
-      optimizationLevel: 2,
+      optimizationLevel: 9,
     },
     mozjpeg: {
-      quality: 80,
+      quality: 40,
     },
     pngquant: {
       quality: [0.8, 0.9],
@@ -31,7 +31,7 @@ const config: UserConfig = {
         },
         {
           name: 'removeEmptyAttrs',
-          active: false,
+          active: true,
         },
       ],
     },
