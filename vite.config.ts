@@ -50,9 +50,7 @@ const config: UserConfig = {
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          lodash: ['lodash']
-        }
+        manualChunks: undefined
       }
     }
   },
