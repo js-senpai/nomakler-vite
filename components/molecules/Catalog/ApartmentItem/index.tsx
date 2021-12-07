@@ -23,7 +23,7 @@ const ApartmentItem = ({
         <BlockContainer  className={`${styles.apartmentItem}`}>
             <div className={styles.apartmentItem__img}>
                 {
-                    <LazyLoad height={232}>
+                    <LazyLoad height={232} offset={50}>
                         <img src={img}  alt={title} width={350} height={232}/>
                     </LazyLoad>
                 }

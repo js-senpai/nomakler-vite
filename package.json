@@ -34,23 +34,6 @@
     "tailwindcss": "^2.2.19",
     "vite-plugin-compression": "^0.3.5",
     "vite-plugin-imagemin": "^0.4.6",
-    "vite-plugin-optimize-persist": "^0.1.1",
     "vite-plugin-package-config": "^0.1.0"
-  },
-  "vite": {
-    "optimizeDeps": {
-      "include": [
-        "@fortawesome/fontawesome-svg-core",
-        "@fortawesome/free-brands-svg-icons",
-        "@fortawesome/free-solid-svg-icons",
-        "@fortawesome/react-fontawesome",
-        "@preact/compat",
-        "preact",
-        "preact/devtools",
-        "preact/hooks",
-        "react",
-        "react-lazyload"
-      ]
-    }
   }
 }
