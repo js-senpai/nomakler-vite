@@ -1,4 +1,4 @@
-import {  useState } from "preact/hooks";
+import {useCallback, useState} from "preact/hooks";
 import {ButtonWithListProps} from "./ButtonWithList.props";
 import { faSortDown } from '@fortawesome/free-solid-svg-icons'
 import styles from './ButtonWithList.module.sass'
@@ -22,23 +22,27 @@ const ButtonWithList = ({ text = '',className = '',children,icon , ...props }:Bu
                 document.removeEventListener('click', handleClick, true);
             }
         },[])
+        const toggleList = useCallback(() => toggleContainer(!showContainer),[showContainer])
         return (
-                <button
-                    {...props}
-                    // @ts-ignore
-                    ref={btnRef}
-                    type="button"
-                    className={`${styles.buttonWithList} ${showContainer ? styles.active : ''} ${className}`}
-                    onClick={() => toggleContainer(!showContainer)}
-                >
-                    <div className={`${styles.buttonWithList__text}`}>{text}</div>
-                    <FontAwesomeIcon className={styles.buttonWithList__icon} icon={icon || faSortDown} />
-                    <div
-                        className={`${styles.buttonWithList__container} ${showContainer ? styles.show : ''}`}
-                    >
-                        {children}
-                    </div>
-                </button>
+               <div className={`${styles.buttonWithList} ${showContainer ? styles.active : ''} ${className}`}>
+                   <button
+                       {...props}
+                       // @ts-ignore
+                       ref={btnRef}
+                       type="button"
+                       className={`${styles.buttonWithList__btn} `}
+                       onClick={() => toggleList()}
+                   >
+                       <div className={`${styles.buttonWithList__text}`}>{text}</div>
+                       <FontAwesomeIcon className={styles.buttonWithList__icon} icon={icon || faSortDown} />
+                   </button>
+                   <div
+                       className={`${styles.buttonWithList__container} ${showContainer ? styles.show : ''}`}
+                   >
+                       {children}
+                   </div>
+               </div>
+
             )
     }
 export default ButtonWithList

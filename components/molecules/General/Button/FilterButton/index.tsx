@@ -11,7 +11,7 @@ const FilterButton = ({list = [],chooseData,currentData,className = '',...props}
             {
                 filteredList.length ?
                     filteredList.map(({key,value}) => (
-                        <div key={key} onClick={() => setValue({key,value})}>
+                        <div className={styles.filterButton__item} key={key} onClick={() => setValue({key,value})}>
                             {key}
                         </div>
                     ))

@@ -47,13 +47,6 @@ const config: UserConfig = {
     jsxFragment: 'Fragment',
     jsxInject: `import { h, Fragment } from 'preact'`,
   },
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: undefined
-      }
-    }
-  },
   resolve: {
     alias: {
       "react": "@preact/compat",
