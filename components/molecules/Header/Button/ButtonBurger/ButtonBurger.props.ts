@@ -1,8 +1,7 @@
-import {ButtonHTMLAttributes, DetailedHTMLProps} from "react";
 
-export type ButtonBurgerProps = DetailedHTMLProps<
-    ButtonHTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
-    > & {
+
+export interface ButtonBurgerProps{
     active: boolean
+    toggle: Function
+    className?: string
 }

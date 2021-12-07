@@ -4,16 +4,16 @@
     @apply grid gap-2 justify-between relative items-center
     grid-template-columns: 1fr 12fr 1fr
   &__wrapper
-    @apply fixed  bg-white p-2
-    left: 5%
-    top: 80px
+    @apply absolute  bg-white p-2
+    left: 4%
+    top: 50px
     bottom: auto
     z-index: 1
     padding: 30px 30px 10px
     box-shadow: 0 0 10px 10px rgb(0 0 0 / 20%)
     display: none
     &.active
-      animation: active 500ms ease-in-out alternate forwards
+      animation: active 300ms ease-in-out alternate forwards
       display: block
   &__btnClose
     @apply block text-2xl

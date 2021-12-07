@@ -3,13 +3,11 @@ import ssr from "vite-plugin-ssr/plugin";
 import { UserConfig } from "vite";
 import viteCompression from 'vite-plugin-compression';
 import viteImagemin from 'vite-plugin-imagemin';
-import OptimizationPersist from 'vite-plugin-optimize-persist'
 import PkgConfig from 'vite-plugin-package-config'
 const config: UserConfig = {
   plugins: [preact(),
     ssr(),
     PkgConfig(),
-    OptimizationPersist(),
     viteCompression({
     algorithm: 'brotliCompress'
   }),viteImagemin({
