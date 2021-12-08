@@ -9,16 +9,7 @@ const isSsr = process.argv.some(item => item === '--ssr');
 console.log(isSsr);
 
 const config: UserConfig = {
-  server: {
-    port: 7503,
-    hmr: {
-      path: 'wss',
-      protocol: 'wss',
-      clientPort: 7503,
-      port: 7503
-    }
-  },
-
+  
   plugins: [
     preact(),
     ssr(),
@@ -57,6 +48,32 @@ const config: UserConfig = {
       }
     })
   ],
+
+  server: {
+    port: 7503,
+    hmr: {
+      path: 'wss',
+      protocol: 'wss',
+      clientPort: 7503,
+      port: 7503
+    }
+  },
+
+  build: isSsr ? {} : {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if(id.includes('node_modules')) {
+            const name = id.match(/node_modules\/([^\/]*)/)[1];
+            
+            return name;
+          }
+
+          else return 'vendor';
+        }
+      }
+    }
+  },
 
   esbuild: {
     jsxFactory: 'h',
