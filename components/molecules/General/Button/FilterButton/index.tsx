@@ -1,15 +1,15 @@
 import {useCallback, useMemo} from "preact/hooks";
 import {FilterButtonProps} from "./FilterButton.props";
 import ButtonWithList from "../../../Header/Button/ButtonWithList";
-import styles from './FilterButton.module.sass'
-const FilterButton = ({list = [],chooseData,currentData,className = '',...props}:FilterButtonProps) => {
+import  './FilterButton.sass'
+export default function FilterButton ({list = [],chooseData,currentData,className = '',...props}:FilterButtonProps)  {
     const setValue = useCallback(chooseData,[currentData])
     return (
-        <ButtonWithList {...props} className={`${styles.filterButton} ${className}`} text={currentData.key} >
+        <ButtonWithList {...props} className={`button-filter ${className}`} text={currentData.key} >
             {
                 list.length ?
                     list.map(({key,value}) => (
-                        <div className={styles.filterButton__item} key={key} onClick={() => setValue({key,value})}>
+                        <div className="button-filter__item" key={key} onClick={() => setValue({key,value})}>
                             {key}
                         </div>
                     ))
@@ -18,4 +18,4 @@ const FilterButton = ({list = [],chooseData,currentData,className = '',...props}
         </ButtonWithList>
     )
 }
-export default FilterButton
+

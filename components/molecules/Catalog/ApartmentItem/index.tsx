@@ -2,12 +2,12 @@ import {faBed,faShower,faRulerCombined} from "@fortawesome/free-solid-svg-icons"
 import LazyLoad from 'react-lazyload';
 // Import components
 import {ApartmentsItemProps} from "./ApartmentsItem.props";
-import styles from './ApartmentItem.module.sass'
+import  './ApartmentItem.sass'
 import BlockContainer from "../../../containers/BlockContainer";
 import Badge from "../../../atoms/Badge";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import LinkPrimary from "../../../atoms/Link/LinkPrimary";
-const ApartmentItem = ({
+export default function ApartmentItem  ({
                        img = '/images/molecules/Catalog/Apartment/item-1.jpg',
                        verified = true,
                        ready = true,
@@ -18,46 +18,46 @@ const ApartmentItem = ({
                        address = '',
                        slug = '',
                        price = 0,
-                       }:ApartmentsItemProps):JSX.Element => {
+                       }:ApartmentsItemProps):JSX.Element  {
     return (
-        <BlockContainer  className={`${styles.apartmentItem}`}>
-            <div className={styles.apartmentItem__img}>
+        <BlockContainer  className="apartment-item">
+            <div className="apartment-item__img">
                 {
                     <LazyLoad height={232} offset={50}>
                         <img src={img}  alt={title} width={350} height={232}/>
                     </LazyLoad>
                 }
                 {
-                    ready ? <Badge className={`${styles.apartmentItem__badge} ${styles.apartmentItem__badgeReadyRent}`}>Ready for rent</Badge>: null
+                    ready ? <Badge className="apartment-item__badge apartment-item__badge-ready-rent">Ready for rent</Badge>: null
                 }
                 {
-                    verified ? <Badge className={`${styles.apartmentItem__badge} ${styles.apartmentItem__badgeVerified}`}>Verified</Badge>: null
+                    verified ? <Badge className="apartment-item__badge apartment-item__badge-verified">Verified</Badge>: null
                 }
             </div>
-            <div className={styles.apartmentItem__content}>
-                <h3 className={styles.apartmentItem__title}>{title ? title: 'title'}</h3>
-                <ul className={styles.apartmentItem__infoList}>
-                    <li className={styles.apartmentItem__infoList__item}>
+            <div className="apartment-item__content">
+                <h3 className="apartment-item__title">{title ? title: 'title'}</h3>
+                <ul className="apartment-item__info-list">
+                    <li className="apartment-item__info-list__item">
                         <FontAwesomeIcon icon={faBed} />
                         <div>{sleepingPlaces || 0}</div>
                     </li>
-                    <li className={styles.apartmentItem__infoList__item}>
+                    <li className="apartment-item__info-list__item">
                         <FontAwesomeIcon icon={faShower} />
                         <div>{shower || 0}</div>
                     </li>
-                    <li className={styles.apartmentItem__infoList__item}>
+                    <li className="apartment-item__info-list__item">
                         <FontAwesomeIcon icon={faRulerCombined} />
                         <div>{dimensions || 0}</div>
                     </li>
                 </ul>
-                <div className={styles.apartmentItem__address}>{ address ? <div>{address}</div>: null }</div>
-                <footer className={styles.apartmentItem__footer}>
-                    <div className={styles.apartmentItem__price}>
-                        <div className={styles.apartmentItem__price__number}>{price || 0}</div>
-                        <div className={styles.apartmentItem__price__text}>EUR/MON</div>
+                <div className="apartment-item__address">{ address.length ? <div>{address}</div>: null }</div>
+                <footer className="apartment-item__footer">
+                    <div className="apartment-item__price">
+                        <div className="apartment-item__price__number">{price || 0}</div>
+                        <div className="apartment-item__price__text">EUR/MON</div>
                     </div>
                     {
-                        slug ? <LinkPrimary url={`/apartment/${slug}`}>More info</LinkPrimary>:null
+                        slug.length ? <LinkPrimary url={`/apartment/${slug}`}>More info</LinkPrimary>:null
                     }
                 </footer>
             </div>
@@ -65,4 +65,3 @@ const ApartmentItem = ({
         </BlockContainer>
     )
 }
-export default ApartmentItem

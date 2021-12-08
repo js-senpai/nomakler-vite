@@ -1,6 +1,5 @@
-
 import {SocialsProps} from "./Socials.props";
-import styles from './Socials.module.sass'
+import  './Socials.sass'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const Socials = ({socials = [],className = '',...props}:SocialsProps):JSX.Element => {
     const GetIcon = ({icon = ''}) => {
@@ -9,10 +8,10 @@ const Socials = ({socials = [],className = '',...props}:SocialsProps):JSX.Elemen
         return <FontAwesomeIcon icon={faIcon}/>
     }
     return (
-        <ul {...props} className={`${styles.socials}`}>
+        <ul {...props} className="socials">
             {
                 socials.map(({id,icon, url}) => (
-                    <li className={`${styles.socials__item}`} key={id}>
+                    <li className="socials__item" key={id}>
                         <a href={url}>
                             <GetIcon icon={icon} />
                         </a>
@@ -21,6 +20,5 @@ const Socials = ({socials = [],className = '',...props}:SocialsProps):JSX.Elemen
             }
         </ul>
     )
-
 }
 export default Socials

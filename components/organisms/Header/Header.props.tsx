@@ -1,5 +1,6 @@
 
 export interface HeaderProps {
+    className?: string
     header: {
         menu: {
             id: number

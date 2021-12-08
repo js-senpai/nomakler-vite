@@ -1,7 +1,7 @@
 
 import {ButtonPrimaryProps} from "./ButtonPrimary.props";
-
-const ButtonPrimary = ({ block = true,className = '',children, ...props }:ButtonPrimaryProps) => {
+import './ButtonPrimary.sass'
+export default  function ButtonPrimary  ({ block = true,className = '',children, ...props }:ButtonPrimaryProps) {
    return (
        <button
            {...props}
@@ -15,4 +15,3 @@ const ButtonPrimary = ({ block = true,className = '',children, ...props }:Button
        >{children}</button>
    )
 }
-export default ButtonPrimary

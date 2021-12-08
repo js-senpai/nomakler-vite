@@ -1,9 +1,7 @@
-
-import styles from './Badge.module.sass'
+import './Badge.sass'
 import {BadgeProps} from "./BadgeProps";
-const Badge = ({children,className = '',...props}:BadgeProps):JSX.Element => {
+export default function Badge({children,className = '',...props}:BadgeProps):JSX.Element {
     return (
-        <div {...props} className={`${styles.badge} ${className}`}>{children}</div>
+        <div {...props} className={`badge ${className}`}>{children}</div>
     )
 }
-export default Badge

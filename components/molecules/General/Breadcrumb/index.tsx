@@ -1,9 +1,9 @@
-import styles from './Breadcrumb.module.sass'
+import  './Breadcrumb.sass'
 import {BreadcrumbProps} from "./Breadcrumb.props";
-import {Link} from "../../../atoms/Link/Link";
-const Breadcrumb = ({navigation = [],className = ''}:BreadcrumbProps):JSX.Element => {
+import Link from "../../../atoms/Link/Link";
+export default function Breadcrumb ({navigation = [],className = ''}:BreadcrumbProps):JSX.Element {
     return (
-        <ul className={`${styles.breadcrumb} ${className}`}>
+        <ul className={`breadcrumb ${className}`}>
             {
                 navigation.length ? navigation.map(({id,name,url},index)=> (
                     <li key={id}>
@@ -15,4 +15,3 @@ const Breadcrumb = ({navigation = [],className = ''}:BreadcrumbProps):JSX.Elemen
     )
 }
 
-export default Breadcrumb

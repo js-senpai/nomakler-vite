@@ -1,20 +1,20 @@
 // Import components
 import {ActualApartmentsProps} from "./ActualApartments.props";
-import styles from './ActualApartments.module.sass'
+import  './ActualApartments.sass'
 import DefaultContainer from "../../../containers/DefaultContainer";
 import FullWidthContainer from "../../../containers/FullWidthContainer";
 
 import ApartmentItem from "../../../molecules/Catalog/ApartmentItem";
-const ActualApartments = ({apartments = [],...props}: ActualApartmentsProps):JSX.Element => {
+export default function ActualApartments  ({apartments = [],...props}: ActualApartmentsProps):JSX.Element  {
   return (
-      <section className={`${styles.actualApartments}`} {...props}>
-          <DefaultContainer className={`${styles.actualApartments__container}`}>
-              <h2 className={styles.actualApartments__title} dangerouslySetInnerHTML={{__html: `The <span class='blue-text'>#1</span> Site for Renters`}} />
-              <div className={styles.actualApartments__description}>Choose from over 1 million apartments, houses, condos, and townhomes for rent.</div>
+      <section className="actual-apartments" {...props}>
+          <DefaultContainer className="actual-apartments__container">
+              <h2 className="actual-apartments__title" dangerouslySetInnerHTML={{__html: `The <span class='blue-text'>#1</span> Site for Renters`}} />
+              <div className="actual-apartments__description">Choose from over 1 million apartments, houses, condos, and townhomes for rent.</div>
           </DefaultContainer>
           <FullWidthContainer>
               {apartments.length ?
-                  <div className={styles.actualApartments__list}>
+                  <div className="actual-apartments__list">
                       {
                           apartments.map(({
                                               id,
@@ -49,4 +49,3 @@ const ActualApartments = ({apartments = [],...props}: ActualApartmentsProps):JSX
       </section>
   )
 }
-export default ActualApartments

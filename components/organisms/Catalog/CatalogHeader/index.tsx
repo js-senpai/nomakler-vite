@@ -1,4 +1,4 @@
-import styles from './CatalogHeader.module.sass'
+import  './CatalogHeader.sass'
 import SearchButton from "../../../molecules/General/Button/SearchButton";
 import FilterButton from "../../../molecules/General/Button/FilterButton";
 import {useMemo, useState} from "preact/hooks";
@@ -9,21 +9,15 @@ import {PageContext} from "../../../../renderer/types";
 import {usePageContext} from "../../../../renderer/usePageContext";
 import { navigate } from "vite-plugin-ssr/client/router"
 import { faFilter } from '@fortawesome/free-solid-svg-icons'
-const CatalogHeader = ({statusList = [],typeList = [],extendedList = [], className = ''}:CatalogHeaderProps):JSX.Element => {
+export default function CatalogHeader  ({statusList = [],typeList = [],extendedList = [], className = ''}:CatalogHeaderProps):JSX.Element  {
     // @ts-ignore
     const pageContext:PageContext = usePageContext();
     // @ts-ignore
     const getQueries = useMemo(() => pageContext?.urlParsed?.search || {},[pageContext?.urlParsed?.search])
-    /* Filters */
-    // Search
     const [searchText,setSearch] = useState('')
-    // Status
     const [status,setStatus] = useState(getQueries.status ? { key: 'Status', value: getQueries.status } : { key: 'Status',value: 'not_set'})
-    // Type
     const [type,setType] = useState(getQueries.type ? { key: 'Type', value: getQueries.type } : { key: 'Type',value: 'not_set'})
-    // Extended filter
     const [extended,setExtended] = useState(getQueries.extended ? { key: 'Extended', value: getQueries.extended } : { key: 'Extended',value: 'not_set'})
-    // Submit filters
     const submitFilters = () => {
         let url = `${pageContext.urlPathname}${Object.keys(getQueries).length?`?${getQueryString({url:getQueries,filterKey: ['status','type']})}`:'?'}`
         if(searchText){
@@ -38,7 +32,7 @@ const CatalogHeader = ({statusList = [],typeList = [],extendedList = [], classNa
         navigate(url, { keepScrollPosition: true })
     }
     return (
-        <div className={`${styles.catalogHeader} ${className}`}>
+        <div className={`catalog-header ${className}`}>
             <SearchButton  onSend={() => {}} onText={setSearch} text={searchText}/>
             {statusList.length ? <FilterButton list={statusList} chooseData={setStatus} currentData={status} />: null}
             {typeList.length ? <FilterButton list={typeList} chooseData={setType} currentData={type} />: null}
@@ -50,5 +44,3 @@ const CatalogHeader = ({statusList = [],typeList = [],extendedList = [], classNa
         </div>
     )
 }
-
-export default CatalogHeader

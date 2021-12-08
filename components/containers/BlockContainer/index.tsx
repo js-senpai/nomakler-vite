@@ -1,12 +1,10 @@
 
-import styles from './BlockContainer.module.sass'
+import  './BlockContainer.sass'
 import {BlockContainerProps} from "./BlockContainer.props";
-const BlockContainer = ({children,className = '',...props}:BlockContainerProps):JSX.Element => {
+export default function BlockContainer ({children,className = '',...props}:BlockContainerProps):JSX.Element  {
     return (
-        <div {...props} className={`${styles.blockContainer} ${className}`}>
+        <div {...props} className={`block-container ${className}`}>
             {children}
         </div>
     )
 }
-
-export default BlockContainer

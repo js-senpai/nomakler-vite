@@ -1,4 +1,4 @@
-.apartmentItem
+.apartment-item
   padding: 0 !important
   &__img
     background-color: var(--grey)
@@ -13,10 +13,10 @@
   &__badge
     position: absolute
     top: 25px
-  &__badgeVerified
+  &__badge-verified
     background-color: #000
     right: 25px
-  &__badgeReadyRent
+  &__badge-ready-rent
     background-color: var(--green)
     left: 25px
   &__content
@@ -28,7 +28,7 @@
     text-align: center
     color: #000000
     margin-bottom: 16px
-  &__infoList
+  &__info-list
     @apply grid justify-between items-center gap-2
     list-style-type: none
     grid-template-columns: repeat(3,auto)
@@ -55,6 +55,6 @@
     &__text
       line-height: 25px
 @screen md
-  .apartmentItem
+  .apartment-item
     &__footer
       grid-template-columns: 1fr 1fr

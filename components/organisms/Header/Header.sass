@@ -1,5 +1,5 @@
 .header
-  padding: 33px 0
+  padding: 30px 0
   &__container
     @apply grid gap-2 justify-between relative items-center
     grid-template-columns: 1fr 12fr 1fr
@@ -15,11 +15,11 @@
     &.active
       animation: active 300ms ease-in-out alternate forwards
       display: block
-  &__btnClose
+  &__button-close
     @apply block text-2xl
     width: 20px
     color: var(--blue)
-  &__btnAuth
+  &__button-auth
     min-width: 229px
     grid-column-start: 1
     grid-column-end: 4
@@ -34,11 +34,11 @@
       @apply static p-0 flex justify-between items-center
       box-shadow: none
       padding: 0
-    &__btnClose
+    &__buttn-close
       @apply hidden
     &__logo
       @apply block
-    &__btnAuth
+    &__button-auth
       grid-column-start: auto
       grid-column-end: auto
 @keyframes active

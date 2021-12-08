@@ -1,9 +1,9 @@
 import ApartmentItem from "../../../molecules/Catalog/ApartmentItem";
 import {CatalogListProps} from "./CatalogList.props";
-import styles from './CatalogList.module.sass'
-const CatalogList = ({catalog = [],className = ''}:CatalogListProps):JSX.Element => {
+import  './CatalogList..sass'
+export default function CatalogList  ({catalog = [],className = ''}:CatalogListProps):JSX.Element {
     return (
-        <div className={`${styles.catalogList} ${className}`}>
+        <div className={`catalog-list ${className}`}>
             {
                 catalog.length ? catalog.map(({
                                                   id,
@@ -35,4 +35,3 @@ const CatalogList = ({catalog = [],className = ''}:CatalogListProps):JSX.Element
         </div>
     )
 }
-export default CatalogList

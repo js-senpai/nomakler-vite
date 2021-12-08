@@ -1,9 +1,9 @@
 import {faBars,faTimes} from "@fortawesome/free-solid-svg-icons";
-import styles from './ButtonBurger.module.sass'
+import  './ButtonBurger.sass'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {useCallback, useEffect, useRef} from "preact/hooks";
 import {ButtonBurgerProps} from "./ButtonBurger.props";
-const ButtonBurger = ({ active = false,toggle,className = '', ...props }:ButtonBurgerProps):JSX.Element => {
+export default function ButtonBurger  ({ active = false,toggle,className = '', ...props }:ButtonBurgerProps):JSX.Element {
         const btnRef = useRef();
         const handleClick = (e: { target: any; }) => {
             // @ts-ignore
@@ -27,7 +27,7 @@ const ButtonBurger = ({ active = false,toggle,className = '', ...props }:ButtonB
                 ref={btnRef}
                 onClick={() => toggleList()}
                 type="button"
-                className={`${styles.buttonBurger}`}
+                className="button-burger"
             >
                 {
                     active ? <FontAwesomeIcon icon={faTimes} />: <FontAwesomeIcon icon={faBars} />
@@ -35,4 +35,3 @@ const ButtonBurger = ({ active = false,toggle,className = '', ...props }:ButtonB
             </button>
         )
     }
-export default ButtonBurger

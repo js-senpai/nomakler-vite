@@ -1,6 +1,7 @@
 
 
 export interface FooterProps {
+    className?: string
     footer: {
         logo: string,
         socials: {

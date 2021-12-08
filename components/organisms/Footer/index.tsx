@@ -1,40 +1,40 @@
 // Import components
 import {FooterProps} from "./Footer.props";
 // Import components
-import styles from './Footer.module.sass'
+import  './Footer.sass'
 import Logo from "../../atoms/Logo";
 import Menu from "../../molecules/Footer/Menu";
 import Copyright from "../../molecules/Footer/Copyright";
 import Socials from "../../molecules/Footer/Socials";
-const Footer = ({footer:{
+export default function Footer  ({footer:{
     logo = '/images/atoms/Logo/LogoDark.svg',
     socials = [],
     menu = [],
     infoMenu = [],
-},...props}:FooterProps):JSX.Element => {
+},className = '',...props}:FooterProps):JSX.Element  {
     return (
-        <footer {...props} className={`${styles.footer}`}>
-            <div className={`container ${styles.footer__container}`}>
-                <div className={`${styles.footer__item}`}>
-                    <div className={`${styles.footer__logo}`}>
+        <footer {...props} className={`footer ${className}`}>
+            <div className="container footer__container">
+                <div className="footer__item">
+                    <div className="footer__logo">
                         <Logo src={logo} />
                     </div>
-                    <div className={`${styles.footer__socials}`}>
+                    <div className="footer__socials">
                         {
                             socials.length ? <Socials  socials={socials} />: null
                         }
                     </div>
                 </div>
-                <div className={`${styles.footer__item}`}>
+                <div className="footer__item">
                     {
                         menu.length ? <Menu menu={menu} />: null
                     }
                 </div>
-                <div className={`${styles.footer__item} ${styles.footer__itemLast}`}>
+                <div className="footer__item footer__item--last">
                     {
                         infoMenu.length ? <Menu menu={infoMenu} />: null
                     }
-                    <div className={`${styles.footer__copyright}`}>
+                    <div className="footer__copyright">
                         <Copyright />
                     </div>
                 </div>
@@ -42,4 +42,3 @@ const Footer = ({footer:{
         </footer>
     )
 }
-export default Footer

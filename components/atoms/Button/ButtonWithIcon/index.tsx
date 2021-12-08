@@ -1,16 +1,15 @@
-
 import {ButtonWithIconProps} from "./ButtonWithIcon.props";
-import styles from './ButtonWithIcon.module.sass'
+import styles from './ButtonWithIcon.sass'
 
-const ButtonWithIcon =  ({text = '', className = '',children, position = 'left', ...props }: ButtonWithIconProps) => {
+export default function ButtonWithIcon ({text = '', className = '',children, position = 'left', ...props }: ButtonWithIconProps)  {
         return (
             <button
+                {...props}
                 type="button"
-                className={`${styles.buttonWithIcon} ${className} ${position === 'left' ? styles.buttonWithIcon__left: styles.buttonWithIcon__right}`}
+                className={`button-with-icon ${className} ${position === 'left' ? 'left': 'right'}`}
             >
-                <div className={styles.buttonWithIcon__icon}>{children}</div>
-                <div className={`${styles.buttonWithIcon__text}`}>{text}</div>
+                <div className="button-with-icon__icon">{children}</div>
+                <div className="button-with-icon__text">{text}</div>
             </button>
         )
     }
-export default ButtonWithIcon

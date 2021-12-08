@@ -1,14 +1,13 @@
-
 import {MenuProps} from "./Menu.props";
-import styles from './Menu.module.sass'
-import {Link} from "../../../atoms/Link/Link";
-const Menu = ({menu = []}:MenuProps):JSX.Element => {
+import  './Menu.sass'
+import Link from "../../../atoms/Link/Link";
+export default function Menu ({menu = [],className = '',...props}:MenuProps):JSX.Element  {
 
     return (
-        <ul  className={`${styles.headerMenu}`}>
+        <ul {...props}  className={`header-menu ${className}`}>
             {
                 menu.length ? menu.map(({id, url,text})=>(
-                    <li key={id} className={`${styles.headerMenu__item}`}>
+                    <li key={id} className="header-menu__item">
                         <Link  href={url}>{text}</Link>
                     </li>
                 )): null
@@ -16,4 +15,3 @@ const Menu = ({menu = []}:MenuProps):JSX.Element => {
         </ul>
     )
 }
-export default Menu

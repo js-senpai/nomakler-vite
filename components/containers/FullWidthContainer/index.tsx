@@ -1,10 +1,9 @@
 import {FullWidthContainerProps} from "./FullWidthContainer.props";
-import './FullWidthContainer.module.sass'
-import styles from './FullWidthContainer.module.sass'
+import './FullWidthContainer.sass'
 
-const FullWidthContainer = ({children,className = ''}:FullWidthContainerProps):JSX.Element => {
+
+export default function FullWidthContainer ({children,className = ''}:FullWidthContainerProps):JSX.Element  {
     return (
-        <div className={`${styles.fullWidthContainer} mx-auto ${className}`}>{children}</div>
+        <div className={`full-width-container mx-auto ${className}`}>{children}</div>
     )
 }
-export default FullWidthContainer

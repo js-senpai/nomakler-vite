@@ -1,11 +1,10 @@
-import styles from './LinkPrimary.module.sass'
-import {Link} from "../Link";
+import  './LinkPrimary.sass'
+import Link from "../Link";
 
-const LinkPrimary = ({url = '/',className = '',...props}):JSX.Element => {
+export default function  LinkPrimary ({url = '/',className = '',...props}):JSX.Element {
     return (
-        <Link {...props} className={`${styles.linkPrimary} ${className}`}  href={url}>
+        <Link {...props} className={`link-primary ${className}`}  href={url}>
             {props.children}
         </Link>
     )
 }
-export default LinkPrimary

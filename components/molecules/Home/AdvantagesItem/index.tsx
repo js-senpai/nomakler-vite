@@ -1,13 +1,13 @@
 // Import components
-import styles from './AdvantagesItem.module.sass'
+import  './AdvantagesItem.sass'
 import {AdvantagesItemProps} from "./AdvantagesItem.props";
 import BlockContainer from "../../../containers/BlockContainer";
 import LazyLoad from 'react-lazyload';
-const AdvantagesItem = ({img = '/images/organisms/Home/Advantages/search.svg',title = '',description = '',...props}:AdvantagesItemProps):JSX.Element => {
+export default function AdvantagesItem  ({img = '/images/organisms/Home/Advantages/search.svg',title = '',description = '',className = '',...props}:AdvantagesItemProps):JSX.Element  {
     return (
-        <BlockContainer {...props} className={styles.advantagesItem}>
+        <BlockContainer {...props} className={`advantages-item ${className}`}>
             {
-                img.length ? <div className={styles.advantagesItem__img}>
+                img.length ? <div className="advantages-item__img">
                     <LazyLoad height={68}>
                         <img
                             width={69}
@@ -18,14 +18,11 @@ const AdvantagesItem = ({img = '/images/organisms/Home/Advantages/search.svg',ti
                 </div>: null
             }
             {
-                title ? <div className={styles.advantagesItem__title}>{title}</div>:null
+                title ? <div className="advantages-item__title">{title}</div>:null
             }
             {
-                description ? <div className={styles.advantagesItem__description}>{description}</div>:null
+                description ? <div className="advantages-item__description">{description}</div>:null
             }
-
-
         </BlockContainer>
     )
 }
-export default AdvantagesItem

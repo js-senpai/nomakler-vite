@@ -1,15 +1,14 @@
-
-import styles from './LanguageList.module.sass'
+import  './LanguageList.sass'
 import ButtonWithList from "../Button/ButtonWithList";
 
-const LanguageList = ():JSX.Element =>{
+export default function LanguageList  ():JSX.Element {
     // Toggle language container
     const locales = ['ru','en']
     return (
-        <ButtonWithList className={styles.languageList} text="ru" >
+        <ButtonWithList className="language-list" text="ru" >
             {
                 locales.length ? locales.map((lang,index) => (
-                    <div key={index} className={styles.languageList__item}>
+                    <div key={index} className="language-list__item">
                             {lang}
                     </div>
                 )): null
@@ -18,4 +17,3 @@ const LanguageList = ():JSX.Element =>{
     )
 }
 
-export default LanguageList

@@ -1,14 +1,12 @@
 // Import components
 import {AdvantagesProps} from "./Advantages.props";
-
-import styles from './Advantages.module.sass'
+import  './Advantages.sass'
 import DefaultContainer from "../../../containers/DefaultContainer";
-
 import AdvantagesItem from "../../../molecules/Home/AdvantagesItem";
-const Advantages = ({advantages = []}:AdvantagesProps):JSX.Element => {
+export default function Advantages  ({advantages = []}:AdvantagesProps):JSX.Element  {
     return (
-        <section  className={`${styles.advantages}`}>
-            <DefaultContainer className={styles.advantages__container}>
+        <section  className="advantages">
+            <DefaultContainer className="advantages__container">
                 {
                     advantages.length ? advantages.map(({id,img,title,description}) => (<AdvantagesItem  key={id} img={img} title={title} description={description} />))  : null
                 }
@@ -16,4 +14,3 @@ const Advantages = ({advantages = []}:AdvantagesProps):JSX.Element => {
         </section>
     )
 }
-export default Advantages
