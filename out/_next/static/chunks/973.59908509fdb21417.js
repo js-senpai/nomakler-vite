@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[973],{9973:function(a,b,c){c.r(b);var d=c(5893);b.default=function(a){var b=a.children,c=a.className;return(0,d.jsx)("div",{className:"container mx-auto ".concat(void 0===c?"":c),children:b})}}}])

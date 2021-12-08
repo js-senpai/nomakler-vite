@@ -1,0 +1,251 @@
+{
+  "../components/molecules/Catalog/ApartmentItem/index.tsx -> ../../../atoms/Badge": {
+    "id": 7261,
+    "files": [
+      "static/css/4e418f9f99762a73.css",
+      "static/chunks/261.120f888b79fb3188.js"
+    ]
+  },
+  "../components/molecules/Catalog/ApartmentItem/index.tsx -> ../../../atoms/Link/LinkPrimary": {
+    "id": 6492,
+    "files": [
+      "static/chunks/commons.bb579dfe1dd12f08.js",
+      "static/css/0ab77d9af690f746.css",
+      "static/chunks/492.dc49dbfedaa8b88a.js"
+    ]
+  },
+  "../components/molecules/Catalog/ApartmentItem/index.tsx -> ../../../containers/BlockContainer": {
+    "id": 4726,
+    "files": [
+      "static/css/a2d8182e3ad90818.css",
+      "static/chunks/726.d109905782acd6bc.js"
+    ]
+  },
+  "../components/molecules/Catalog/ApartmentItem/index.tsx -> next/image": {
+    "id": 8027,
+    "files": [
+      "static/chunks/commons.bb579dfe1dd12f08.js",
+      "static/chunks/27.fd72f4da648968ec.js"
+    ]
+  },
+  "../components/molecules/Footer/Copyright/index.tsx -> next/image": {
+    "id": 8027,
+    "files": [
+      "static/chunks/commons.bb579dfe1dd12f08.js",
+      "static/chunks/27.fd72f4da648968ec.js"
+    ]
+  },
+  "../components/molecules/Footer/Menu/index.tsx -> next/link": {
+    "id": 543,
+    "files": [
+      "static/chunks/commons.bb579dfe1dd12f08.js"
+    ]
+  },
+  "../components/molecules/Header/LanguageList/index.tsx -> ../Button/ButtonWithList": {
+    "id": 4961,
+    "files": [
+      "static/chunks/framework-84e512c71433b805.js",
+      "static/chunks/commons.bb579dfe1dd12f08.js",
+      "static/css/612e54efe9974b22.css",
+      "static/chunks/961.e7ecad41c5fc4bbb.js"
+    ]
+  },
+  "../components/molecules/Header/LanguageList/index.tsx -> next/link": {
+    "id": 543,
+    "files": [
+      "static/chunks/commons.bb579dfe1dd12f08.js"
+    ]
+  },
+  "../components/molecules/Header/Menu/index.tsx -> next/link": {
+    "id": 543,
+    "files": [
+      "static/chunks/commons.bb579dfe1dd12f08.js"
+    ]
+  },
+  "../components/molecules/Home/AdvantagesItem/index.tsx -> ../../../containers/BlockContainer": {
+    "id": 4726,
+    "files": [
+      "static/css/a2d8182e3ad90818.css",
+      "static/chunks/726.d109905782acd6bc.js"
+    ]
+  },
+  "../components/molecules/Home/AdvantagesItem/index.tsx -> next/image": {
+    "id": 8027,
+    "files": [
+      "static/chunks/commons.bb579dfe1dd12f08.js",
+      "static/chunks/27.fd72f4da648968ec.js"
+    ]
+  },
+  "../components/organisms/Footer/index.tsx -> ../../atoms/Logo": {
+    "id": 8548,
+    "files": [
+      "static/chunks/commons.bb579dfe1dd12f08.js",
+      "static/css/eccb18c55d799e26.css",
+      "static/chunks/548.32a644e647ff1912.js"
+    ]
+  },
+  "../components/organisms/Footer/index.tsx -> ../../containers/DefaultContainer": {
+    "id": 3134,
+    "files": [
+      "static/chunks/134.8bd0276a5b2270d1.js"
+    ]
+  },
+  "../components/organisms/Footer/index.tsx -> ../../molecules/Footer/Copyright": {
+    "id": 926,
+    "files": [
+      "static/css/2e85d6fca91e79bf.css",
+      "static/chunks/926.3e53734d2cd5b3cd.js"
+    ]
+  },
+  "../components/organisms/Footer/index.tsx -> ../../molecules/Footer/Menu": {
+    "id": 8405,
+    "files": [
+      "static/css/84c509a2878a1c37.css",
+      "static/chunks/28.c4bbc7d6959d9a89.js"
+    ]
+  },
+  "../components/organisms/Footer/index.tsx -> ../../molecules/Footer/Socials": {
+    "id": 1957,
+    "files": [
+      "static/chunks/framework-84e512c71433b805.js",
+      "static/chunks/commons.bb579dfe1dd12f08.js",
+      "static/css/04d79cead0c73830.css",
+      "static/chunks/957.db024ff2db86f42b.js"
+    ]
+  },
+  "../components/organisms/Header/index.tsx -> ../../atoms/Logo": {
+    "id": 8548,
+    "files": [
+      "static/chunks/commons.bb579dfe1dd12f08.js",
+      "static/css/eccb18c55d799e26.css",
+      "static/chunks/548.32a644e647ff1912.js"
+    ]
+  },
+  "../components/organisms/Header/index.tsx -> ../../containers/DefaultContainer": {
+    "id": 3134,
+    "files": [
+      "static/chunks/134.8bd0276a5b2270d1.js"
+    ]
+  },
+  "../components/organisms/Header/index.tsx -> ../../molecules/Header/Button/ButtonBurger": {
+    "id": 7143,
+    "files": [
+      "static/chunks/framework-84e512c71433b805.js",
+      "static/chunks/commons.bb579dfe1dd12f08.js",
+      "static/css/c060c4233d6246de.css",
+      "static/chunks/143.9c0695efd5bf1188.js"
+    ]
+  },
+  "../components/organisms/Header/index.tsx -> ../../molecules/Header/Button/ButtonSign": {
+    "id": 3614,
+    "files": [
+      "static/chunks/framework-84e512c71433b805.js",
+      "static/chunks/commons.bb579dfe1dd12f08.js",
+      "static/css/9a5a2e531312c17f.css",
+      "static/chunks/614.b11c6d31888acfdd.js"
+    ]
+  },
+  "../components/organisms/Header/index.tsx -> ../../molecules/Header/LanguageList": {
+    "id": 5906,
+    "files": [
+      "static/css/6f12e46cdf7ad7a2.css",
+      "static/chunks/906.f3a19e31966d6333.js"
+    ]
+  },
+  "../components/organisms/Header/index.tsx -> ../../molecules/Header/Menu": {
+    "id": 6519,
+    "files": [
+      "static/css/96af8359447c9ce6.css",
+      "static/chunks/519.026803b1235c6f78.js"
+    ]
+  },
+  "../components/organisms/Home/ActualApartments/index.tsx -> ../../../containers/DefaultContainer": {
+    "id": 3134,
+    "files": [
+      "static/chunks/134.8bd0276a5b2270d1.js"
+    ]
+  },
+  "../components/organisms/Home/ActualApartments/index.tsx -> ../../../containers/FullWidthContainer": {
+    "id": 1730,
+    "files": [
+      "static/css/d37ecb5349f48051.css",
+      "static/chunks/730.692847af40036de9.js"
+    ]
+  },
+  "../components/organisms/Home/ActualApartments/index.tsx -> ../../../molecules/Catalog/ApartmentItem": {
+    "id": 825,
+    "files": [
+      "static/chunks/framework-84e512c71433b805.js",
+      "static/chunks/commons.bb579dfe1dd12f08.js",
+      "static/css/3fc6fc76e479527e.css",
+      "static/chunks/825.039e0312e0ed7913.js"
+    ]
+  },
+  "../components/organisms/Home/Advantages/index.tsx -> ../../../containers/DefaultContainer": {
+    "id": 3134,
+    "files": [
+      "static/chunks/134.8bd0276a5b2270d1.js"
+    ]
+  },
+  "../components/organisms/Home/Advantages/index.tsx -> ../../../molecules/Home/AdvantagesItem": {
+    "id": 7098,
+    "files": [
+      "static/css/dbe4c134eacbb323.css",
+      "static/chunks/98.0fb3a7e9e019a707.js"
+    ]
+  },
+  "../components/organisms/Home/Banner/index.tsx -> ../../../containers/DefaultContainer": {
+    "id": 3134,
+    "files": [
+      "static/chunks/134.8bd0276a5b2270d1.js"
+    ]
+  },
+  "../components/organisms/Home/Banner/index.tsx -> next/image": {
+    "id": 8027,
+    "files": [
+      "static/chunks/commons.bb579dfe1dd12f08.js",
+      "static/chunks/27.fd72f4da648968ec.js"
+    ]
+  },
+  "../components/templates/Home/index.tsx -> ../../organisms/Home/ActualApartments": {
+    "id": 8622,
+    "files": [
+      "static/css/f99897e36b0ff6d6.css",
+      "static/chunks/622.b3dc1937cfc7379f.js"
+    ]
+  },
+  "../components/templates/Home/index.tsx -> ../../organisms/Home/Advantages": {
+    "id": 4363,
+    "files": [
+      "static/css/3377ae7e821ce3b0.css",
+      "static/chunks/363.296f177b66f33d40.js"
+    ]
+  },
+  "../components/templates/Home/index.tsx -> ../../organisms/Home/Banner": {
+    "id": 230,
+    "files": [
+      "static/css/17eb41a93c65cb6e.css",
+      "static/chunks/230.995a8345ec5df5eb.js"
+    ]
+  },
+  "../layouts/DefaultLayout/index.tsx -> ../../components/organisms/Footer": {
+    "id": 1769,
+    "files": [
+      "static/css/f36821da22a3f4b1.css",
+      "static/chunks/769.15958f761adb8c72.js"
+    ]
+  },
+  "../layouts/DefaultLayout/index.tsx -> ../../components/organisms/Header": {
+    "id": 6325,
+    "files": [
+      "static/css/b8f68d3ccea144e1.css",
+      "static/chunks/325.3186bc7a71b511ec.js"
+    ]
+  },
+  "index.tsx -> ../components/templates/Home": {
+    "id": 9850,
+    "files": [
+      "static/chunks/850.d86b2225d9179ccc.js"
+    ]
+  }
+}
