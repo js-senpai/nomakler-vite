@@ -1,6 +1,4 @@
-
 export interface LogoProps {
-    src: string
-    priority?: boolean
-    className?: string
+  src: string;
+  className?: string;
 }

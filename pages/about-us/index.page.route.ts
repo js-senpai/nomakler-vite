@@ -1,1 +1,1 @@
-export default `/about-us`
+export default `/about-us`;
