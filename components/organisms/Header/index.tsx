@@ -2,9 +2,9 @@ import { useState } from "preact/hooks";
 import "./Header.sass";
 import { HeaderProps } from "./Header.props";
 import ButtonBurger from "../../molecules/Header/Button/ButtonBurger";
-import Logo from "../../atoms/Logo";
 import LanguageList from "../../molecules/Header/LanguageList";
 import Menu from "../../molecules/Header/Menu";
+import Logo from "../../atoms/Logo";
 import ButtonSign from "../../molecules/Header/Button/ButtonSign";
 export default ({
   header: { menu = [], src = "/images/atoms/Logo/LogoLight.svg" },

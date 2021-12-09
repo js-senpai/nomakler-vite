@@ -14,11 +14,11 @@ const config: UserConfig = {
     }),
     viteImagemin({
       gifsicle: {
-        optimizationLevel: 9,
+        optimizationLevel: 5,
         interlaced: false,
       },
       optipng: {
-        optimizationLevel: 9,
+        optimizationLevel: 5,
       },
       mozjpeg: {
         quality: 40,

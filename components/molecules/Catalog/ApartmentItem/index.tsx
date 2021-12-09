@@ -11,6 +11,7 @@ import BlockContainer from "../../../containers/BlockContainer";
 import Badge from "../../../atoms/Badge";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LinkPrimary from "../../../atoms/Link/LinkPrimary";
+import Price from "../../../atoms/Price";
 export default ({
   img = "/images/molecules/Catalog/Apartment/item-1.jpg",
   verified = true,
@@ -62,10 +63,7 @@ export default ({
           {address.length ? <div>{address}</div> : null}
         </div>
         <footer className="apartment-item__footer">
-          <div className="apartment-item__price">
-            <div className="apartment-item__price__number">{price || 0}</div>
-            <div className="apartment-item__price__text">EUR/MON</div>
-          </div>
+          <Price price={price || 0} currency="EUR/MON" />
           {slug.length ? (
             <LinkPrimary url={`/apartment/${slug}`}>More info</LinkPrimary>
           ) : null}

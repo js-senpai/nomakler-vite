@@ -70,7 +70,7 @@ async function onBeforeRender() {
               shower: 56,
               dimensions: 56,
               address: "Metro Plaza Dr, Jersey City, NJ 07302, USA",
-              slug: `apartment-${i}`,
+              slug: `/apartment/${i}`,
               price: 500,
               img: `/images/molecules/Catalog/Apartment/item-${count}.jpg`,
             };
