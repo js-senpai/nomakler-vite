@@ -9,7 +9,7 @@ export default ({
 }: BannerProps): JSX.Element => {
   return (
     <section {...props} className="banner">
-      <img src={img} className="banner__img" />
+      <img src={img} width="100%" height="560" className="banner__img" />
       <DefaultContainer className="container main-container relative">
         {title.length ? <h1 className="banner__title">{title}</h1> : null}
         {description.length ? (
