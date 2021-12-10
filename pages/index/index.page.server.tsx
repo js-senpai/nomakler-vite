@@ -130,22 +130,22 @@ async function onBeforeRender() {
             {
               id: 1,
               url: "http://test.com",
-              icon: "fab instagram",
+              icon: "instagram",
             },
             {
               id: 2,
               url: "http://test.com",
-              icon: "fab pinterest-p",
+              icon: "pinterest",
             },
             {
               id: 3,
               url: "http://test.com",
-              icon: "fab facebook-f",
+              icon: "facebook",
             },
             {
               id: 4,
               url: "http://test.com",
-              icon: "fab twitter",
+              icon: "twitter",
             },
           ],
         },

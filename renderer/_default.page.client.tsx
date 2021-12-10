@@ -22,4 +22,5 @@ useClientRouter({
     }
     // document.title = getPageTitle(pageContext)
   },
+  prefetchLinks: true,
 });
