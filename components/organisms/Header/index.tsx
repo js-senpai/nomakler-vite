@@ -16,11 +16,6 @@ const Header = ({ header: {menu = [],src = '/images/atoms/Logo/LogoLight.svg'},.
                  <Logo src={src}  />
              </div>
              <div className={`${styles.header__wrapper} ${showMenu ? styles.active: ''}`}>
-                 {/*<div className="flex justify-end">*/}
-                 {/*    <button className={styles.header__btnClose} onClick={() => toggleMenu()}>*/}
-                 {/*        <FontAwesomeIcon icon={faTimes} />*/}
-                 {/*    </button>*/}
-                 {/*</div>*/}
                  {menu.length ?<Menu menu={menu} />: null}
              </div>
              <LanguageList />

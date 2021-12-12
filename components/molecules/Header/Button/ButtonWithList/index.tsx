@@ -1,8 +1,6 @@
 import {useCallback, useState} from "preact/hooks";
 import {ButtonWithListProps} from "./ButtonWithList.props";
-import { faSortDown } from '@fortawesome/free-solid-svg-icons'
 import styles from './ButtonWithList.module.sass'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect,useRef } from "preact/hooks";
 const ButtonWithList = ({ text = '',className = '',children,icon , ...props }:ButtonWithListProps) => {
         const [showContainer,toggleContainer] = useState(false)
@@ -34,7 +32,6 @@ const ButtonWithList = ({ text = '',className = '',children,icon , ...props }:Bu
                        onClick={() => toggleList()}
                    >
                        <div className={`${styles.buttonWithList__text}`}>{text}</div>
-                       <FontAwesomeIcon className={styles.buttonWithList__icon} icon={icon || faSortDown} />
                    </button>
                    <div
                        className={`${styles.buttonWithList__container} ${showContainer ? styles.show : ''}`}

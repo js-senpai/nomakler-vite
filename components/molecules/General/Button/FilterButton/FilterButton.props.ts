@@ -1,5 +1,3 @@
-import {IconProp} from "@fortawesome/fontawesome-svg-core";
-
 export interface FilterButtonProps {
    list: FilterButtonType[]
    chooseData: Function

@@ -1,11 +1,9 @@
-import {faBed,faShower,faRulerCombined} from "@fortawesome/free-solid-svg-icons";
 import LazyLoad from 'react-lazyload';
 // Import components
 import {ApartmentsItemProps} from "./ApartmentsItem.props";
 import styles from './ApartmentItem.module.sass'
 import BlockContainer from "../../../containers/BlockContainer";
 import Badge from "../../../atoms/Badge";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import LinkPrimary from "../../../atoms/Link/LinkPrimary";
 const ApartmentItem = ({
                        img = '/images/molecules/Catalog/Apartment/item-1.jpg',
@@ -38,15 +36,12 @@ const ApartmentItem = ({
                 <h3 className={styles.apartmentItem__title}>{title ? title: 'title'}</h3>
                 <ul className={styles.apartmentItem__infoList}>
                     <li className={styles.apartmentItem__infoList__item}>
-                        <FontAwesomeIcon icon={faBed} />
                         <div>{sleepingPlaces || 0}</div>
                     </li>
                     <li className={styles.apartmentItem__infoList__item}>
-                        <FontAwesomeIcon icon={faShower} />
                         <div>{shower || 0}</div>
                     </li>
                     <li className={styles.apartmentItem__infoList__item}>
-                        <FontAwesomeIcon icon={faRulerCombined} />
                         <div>{dimensions || 0}</div>
                     </li>
                 </ul>

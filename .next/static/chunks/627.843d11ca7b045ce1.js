@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[627],{627:function(a){a.exports=JSON.parse("{\"PRICE_CURRENCY\":\"EUR/MON\",\"READY_RENT\":\"Ready for rent\",\"VERIFIED\":\"Verified\"}")}}])

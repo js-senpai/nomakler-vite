@@ -1,5 +1,3 @@
-import {faAngleLeft,faAngleRight} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { useMemo, useState} from "preact/hooks";
 import {PaginationProps} from "./Pagination.props";
 import {Link} from "../../../atoms/Link/Link";
@@ -36,7 +34,6 @@ const Pagination = ({total = 1, className = ''}:PaginationProps):JSX.Element => 
   return (
       <div className={`${styles.pagination}`}>
           <button className={`${styles.pagination__item}`} onClick={() => navPrev()}>
-              <FontAwesomeIcon icon={faAngleLeft} />
           </button>
           {
               total >= 1 ? getTotal.map((e,i) =>(
@@ -44,7 +41,6 @@ const Pagination = ({total = 1, className = ''}:PaginationProps):JSX.Element => 
               )) : null
           }
           <button className={`${styles.pagination__item}`} onClick={() => navNext()}>
-              <FontAwesomeIcon icon={faAngleRight} />
           </button>
       </div>
   )

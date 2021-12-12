@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[40],{2040:function(a){a.exports=JSON.parse("{\"SEND_MESSAGE\":\"Send message\",\"SIGN\":\"Sign In/Login In\",\"MORE_INFO\":\"More info\"}")}}])

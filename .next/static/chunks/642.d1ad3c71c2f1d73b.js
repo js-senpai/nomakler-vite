@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[642],{4642:function(a){a.exports=JSON.parse("{\"SEND_MESSAGE\":\"Отправить сообщение\",\"SIGN\":\"Регистрация/Вход\",\"MORE_INFO\":\"Подробнее\"}")}}])

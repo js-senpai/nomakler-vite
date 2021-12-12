@@ -6,10 +6,8 @@ import viteImagemin from 'vite-plugin-imagemin';
 import PkgConfig from 'vite-plugin-package-config'
 
 const isSsr = process.argv.some(item => item === '--ssr');
-console.log(isSsr);
 
 const config: UserConfig = {
-  
   plugins: [
     preact(),
     ssr(),

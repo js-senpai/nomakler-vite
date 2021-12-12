@@ -8,7 +8,6 @@ import getQueryString from "../../../../helpers/getQueryString";
 import {PageContext} from "../../../../renderer/types";
 import {usePageContext} from "../../../../renderer/usePageContext";
 import { navigate } from "vite-plugin-ssr/client/router"
-import { faFilter } from '@fortawesome/free-solid-svg-icons'
 const CatalogHeader = ({statusList = [],typeList = [],extendedList = [], className = ''}:CatalogHeaderProps):JSX.Element => {
     // @ts-ignore
     const pageContext:PageContext = usePageContext();
@@ -42,7 +41,7 @@ const CatalogHeader = ({statusList = [],typeList = [],extendedList = [], classNa
             <SearchButton  onSend={() => {}} onText={setSearch} text={searchText}/>
             {statusList.length ? <FilterButton list={statusList} chooseData={setStatus} currentData={status} />: null}
             {typeList.length ? <FilterButton list={typeList} chooseData={setType} currentData={type} />: null}
-            {extendedList.length ? <FilterButton list={extendedList} chooseData={setExtended} currentData={extended} icon={faFilter} />: null }
+            {extendedList.length ? <FilterButton list={extendedList} chooseData={setExtended} currentData={extended} />: null }
             <ButtonPrimary
                 // @ts-ignore
                 onClick={() => submitFilters()}

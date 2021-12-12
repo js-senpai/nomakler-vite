@@ -5,6 +5,7 @@ import { useClientRouter } from 'vite-plugin-ssr/client/router'
 import {getPageTitle} from "./getPageTitle";
 import { PageContextBuiltInClient} from "vite-plugin-ssr/client";
 import {PageContext} from "./types";
+
 useClientRouter({
   async render(pageContext: PageContextBuiltInClient & PageContext) {
     const { Page, pageProps } = pageContext;
